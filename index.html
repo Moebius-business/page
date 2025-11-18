@@ -1,1106 +1,741 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <title>MOEBIUS - Startup para la ciencia</title>
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta content="Bodo - Simple One Page Personal" name="description">
-    <meta content="BdgPixel" name="author">
-    <!--Fav-->
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="images/favicon.ico" rel="shortcut icon">
-    
-    <!--styles-->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/owl.theme.css" rel="stylesheet">
-    <link href="css/magnific-popup.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
-    
-    <!--fonts google-->
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
-    
-    <!--[if lt IE 9]>
-       <script type="text/javascript" src="js/html5shiv.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <!--PRELOADER-->
-    <div id="preloader">
-      <div id="status">
-        <img alt="logo" src="images/logo-big.png">
-      </div>
-    </div>
-    <!--/.PRELOADER END-->
+    <title>MOEBIUS | Startup para la Ciencia</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Iconos (Phosphor Icons para un look moderno) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    <!--HEADER -->
-    <div class="header">
-      <div class="for-sticky">
-        <!--LOGO-->
-        <div class="col-md-2 col-xs-6 logo">
-          <a href="index.html"><img alt="logo" class="logo-nav" src="images/logo.png"></a>
-        </div>
-        <!--/.LOGO END-->
-      </div>
-      <div class="menu-wrap">
-        <nav class="menu">
-          <div class="menu-list">
-            <a data-scroll="" href="#home" class="active">
-                <span>Home</span>
-              </a>
-              <a data-scroll="" href="#about">
-                <span>Información</span>
-              </a>
-              <a data-scroll="" href="#work">
-                <span>Trabajo</span>
-              </a>
-              <a data-scroll="" href="#services">
-                <span>Servicios</span>
-              </a>
-              <a data-scroll="" href="#employement">
-                <span>Mision</span>
-              </a>
-              <a data-scroll="" href="#skill">
-                <span>Habilidades</span>
-              </a>
-              <a data-scroll="" href="#education">
-                <span>Educacíon</span>
-              </a>
-              <a data-scroll="" href="#testimonial">
-                <span>Motivacion</span>
-              </a>
-              <a data-scroll="" href="#blog">
-                <span>Equipo</span>
-              </a>
-              <a data-scroll="" href="#contact">
-                <span>Contacto</span>
-            </a>
-          </div>
-        </nav>
-        <button class="close-button" id="close-button">Close Menu</button>
-      </div>
-      <button class="menu-button" id="open-button">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button><!--/.for-sticky-->
-    </div>
-    <!--/.HEADER END-->
-    
-    <!--CONTENT WRAP-->
-    <div class="content-wrap">
-      <!--CONTENT-->
-      <div class="content">
-        <!--HOME-->
-        <section id="home">
-          <div class="container">
-            <div class="row">
-              <div class="wrap-hero-content">
-                  <div class="hero-content">
-                    <h1>Hola</h1>
-                    <br>
-                    <span class="typed"></span>
-                  </div>
-              </div>
-              <div class="mouse-icon margin-20">
-                <div class="scroll"></div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!--/.HOME END-->
-
-        <!--ABOUT-->
-        <section id="about">
-          <div class="col-md-6 col-xs-12 no-pad">
-            <div class="bg-about"></div>
-          </div>
-          <div class="col-md-6 col-sm-12 col-xs-12 white-col">
-            <div class="row">
-              <!--OWL CAROUSEL2-->
-              <div class="owl-carousel2">
-                <div class="col-md-12">
-                  <div class="wrap-about">
-                    <div class="w-content">
-                      <p class="head-about">
-                        Nuestra visión empresarial es difundir conocimientos en ciencia de datos, matemática, física, estadística, programación, inteligencia artificial, educación, ciencia e ingeniería en el Perú para promover la innovación y el desarrollo en el país. Queremos inspirar a otros a adquirir habilidades y conocimientos para tener un impacto positivo en la sociedad y ayudar a construir un futuro mejor.
-                      </p>
-                      
-                      <h5 class="name">
-                        Moebius
-                      </h5>
-                      <img alt="signature" src="images/signature.png">
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="col-md-12 col-sm-12 col-xs-12 white-col">
-                  <div class="row">
-                    <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
-                      <div class="wrap-about">
-                        <table class="w-content">
-                          <tr>
-                            <td class="title">Nombre </td>
-                            <td class="break">:</td>
-                            <td> MOEBIUS</td>
-                          </tr>
-                          <tr>
-                            <td class="title">Contacto </td>
-                            <td class="break">:</td>
-                            <td> +51 935 027 265</td>
-                          </tr>
-                          <tr>
-                            <td class="title">Email </td>
-                            <td class="break">:</td>
-                            <td> moebius.business@gmail.com</td>
-                          </tr>
-                          <tr>
-                            <td class="title">Address </td>
-                            <td class="break">:</td>
-                            <td> Ayacucho, Perú</td>
-                          </tr>
-                          <tr>
-                            <td class="title">Facebook </td>
-                            <td class="break">:</td>
-                            <td> Moebius</td>
-                          </tr>
-                          <tr>
-                            <td class="title">Twitter </td>
-                            <td class="break">:</td>
-                            <td> MoebiusBusiness</td>
-                          </tr>
-                          <tr>
-                            <td class="title">Linkedin</td>
-                            <td class="break">:</td>
-                            <td> Moebius-Business</td>
-                          </tr>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--/.OWL CAROUSEL2 END-->
-            </div>
-          </div>
-        </section>
-        <!--/.ABOUT END-->
-
-        <!--WORK-->
-        <section class="grey-bg mar-tm-10" id="work">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <h3 class="title-small">
-                  <span>Nuestro trabajo</span>
-                </h3>
-                <p class="content-detail">
-                  Somos jóvenes de la facultad de ciencias físico-matemáticas y formamos esta startup con la experiencia de años estudiando y aprendiendo sobre temas relacionados con ciencia de datos, matemática, física, estadística, programación, inteligencia artificial, educación, ciencia e ingeniería. Hemos dedicado horas y horas de estudio y práctica, y hemos adquirido conocimientos avanzados y habilidades técnicas en estas áreas. Están motivados por compartir lo que hemos aprendido y utilizar sus habilidades para ayudar a otros a adquirir conocimientos y habilidades en estas áreas. Estamos muy comprometidos a construir una plataforma en línea que sea accesible y fácil de usar para cualquier persona interesada en aprender y desarrollar habilidades en estas áreas. Están emocionados por compartir su conocimiento y ayudar a otros a tener éxito en sus carreras y en su vida cotidiana.
-                </p>
-              </div>
-              <div class="col-md-9 content-right">
-                <!--PORTFOLIO IMAGE-->
-                <ul class="portfolio-image">
-                  <li class="col-md-6">
-                    <a href="images/bw-1.png"><img alt="image" src="images/bw-1.png">
-                      <div class="decription-wrap">
-                        <div class="image-bg">
-                           <p class="desc">Diseño Grafico</p>
-                        </div>
-
-                      </div>
-                    </a>
-                  </li>
-                  <li class="col-md-6">
-                    <a href="images/bw-2.png"><img alt="image" src="images/bw-2.png">
-                      <div class="decription-wrap">
-                        <div class="image-bg">
-                          <p class="desc">
-                            Python
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="col-md-6">
-                    <a href="images/bw-3.png"><img alt="image" src="images/bw-3.png">
-                      <div class="decription-wrap">
-                        <div class="image-bg">
-                          <p class="desc">
-                            LaTeX
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="col-md-6">
-                    <a href="images/bw-4.png"><img alt="image" src="images/bw-4.png">
-                      <div class="decription-wrap">
-                        <div class="image-bg">
-                          <p class="desc">
-                            Matemáticas
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="col-md-6">
-                    <a href="images/bw-5.png"><img alt="image" src="images/bw-5.png">
-                      <div class="decription-wrap">
-                        <div class="image-bg">
-                          <p class="desc">
-                            Fisica
-                          </p>  
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="col-md-6">
-                    <a href="images/bw-6.png"><img alt="image" src="images/bw-6.png">
-                      <div class="decription-wrap">
-                        <div class="image-bg">
-                          <p class="desc">
-                            R
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-                <!--/.PORTFOLIO IMAGE END-->
-              </div>
-            </div>
-          </div>
-        </section>
-        <!--/.WORK END-->
-
-        <!--WORK-->
-        <section class="white-bg mar-tm-10" id="work">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <h3 class="title-small">
-                  <span>Nuestro trabajo en videos:</span>
-                </h3>
-                <p class="content-detail">
-                  Nuestro equipo de estudiantes apasionados está comprometido en utilizar lenguajes de programación como Python, LaTeX y R para desarrollar contenido audiovisual de alta calidad. Aprovechamos las capacidades de Python para visualizar datos y modelar fenómenos científicos complejos. LaTeX nos permite crear documentos científicos profesionales con fórmulas matemáticas precisas y presentaciones elegantes. Y con R, exploramos y analizamos datos de manera rigurosa, obteniendo insights fundamentales para nuestras investigaciones.
-                </p>
-              </div>
-              <div class="col-md-9 content-right">
-                <!--PORTFOLIO VIDEOS-->
-                <ul class="portfolio-videos">
-                  <li class="col-md-6">
-                    <a href="https://www.youtube.com/watch?v=5MBF6sDOkgc">
-                      <div class="video-wrapper">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/5MBF6sDOkgc" frameborder="0" allowfullscreen></iframe>
-                      </div>
-                      <div class="decription-wrap">
-                        <div class="image-bg">
-                          <p class="desc">Diseño Gráfico</p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="col-md-6">
-                    <a href="https://www.youtube.com/watch?v=-8z-n9aWwSM">
-                      <div class="video-wrapper">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/-8z-n9aWwSM" frameborder="0" allowfullscreen></iframe>
-                      </div>
-                      <div class="decription-wrap">
-                        <div class="image-bg">
-                          <p class="desc">Python</p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="col-md-6">
-                    <a href="https://www.youtube.com/watch?v=7yn4cgAibs8">
-                      <div class="video-wrapper">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/7yn4cgAibs8" frameborder="0" allowfullscreen></iframe>
-                      </div>
-                      <div class="decription-wrap">
-                        <div class="image-bg">
-                          <p class="desc">LaTeX</p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="col-md-6">
-                    <a href="https://www.youtube.com/watch?v=8heBBxsk0pM">
-                      <div class="video-wrapper">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/8heBBxsk0pM" frameborder="0" allowfullscreen></iframe>
-                      </div>
-                      <div class="decription-wrap">
-                        <div class="image-bg">
-                          <p class="desc">Matemáticas</p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="col-md-6">
-                    <a href="https://www.youtube.com/watch?v=VIDEO_ID">
-                      <div class="video-wrapper">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-                      </div>
-                      <div class="decription-wrap">
-                        <div class="image-bg">
-                          <p class="desc">Física</p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="col-md-6">
-                    <a href="https://www.youtube.com/watch?v=VIDEO_ID">
-                      <div class="video-wrapper">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-                      </div>
-                      <div class="decription-wrap">
-                        <div class="image-bg">
-                          <p class="desc">R</p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-                <!--/.PORTFOLIO VIDEOS END-->
-              </div>
-            </div>
-          </div>
-        </section>
-        <!--/.WORK END-->
-
-        <!--/.WORK END-->
-        <section class="grey-bg mar-tm-10" id="work">
-          <div class="container">
-            <div class="row">
-              <title>Biblioteca Virtual</title>
-              <style>
-                .column {
-                  float: left;
-                  width: 50%;
-                }
-              </style>
-            </head>
-            <body>
-              <h1>Biblioteca Virtual</h1>
-            
-              <div class="column">
-                <h2>Matemática</h2>
-                <ul>
-                  <li><a href="libros/matematica-libro1.pdf">Libro 1 de Matemática</a></li>
-                  <li><a href="docs/phisic/Geom_dif[1].pdf">Blockchain del futuro: Percibiendo a través de la inteligencia
-artificial</a></li>
-                  <li><a href="libros/matematica-libro3.pdf">Libro 3 de Matemática</a></li>
-                </ul>
-            
-                <h2>Física</h2>
-                <ul>
-                  <li><a href="docs/phisic/main.pdf">MODELADO Y OPTIMIZACION DE UN CICLO OTTO UTILIZANDO LA MEZCLA ETANOL-GASOLINA</a></li>
-                  <li><a href="docs/phisic/LABORATORIO 03 DESARROLLO COMPLETO.pdf">TIEMPO DE REACCION</a></li>
-                  <li><a href="libros/ProjectCristhian-arduino.pdf">Luminiscencia de los LED al detectar ondas acusticas con el sensor de sonido KY-038+Arduino</a></li>
-                </ul>
-              </div>
-            
-              <div class="column">
-                <h2>Estadística</h2>
-                <ul>
-                  <li><a href="libros/estadistica-libro1.pdf">Libro 1 de Estadística</a></li>
-                  <li><a href="libros/estadistica-libro2.pdf">Libro 2 de Estadística</a></li>
-                  <li><a href="libros/estadistica-libro3.pdf">Libro 3 de Estadística</a></li>
-                </ul>
-            
-                <h2>Programación</h2>
-                <ul>
-                  <li><a href="docs/code/pyforsis.pdf">Python orientado hacia Sistemas Dinamicos</a></li>
-                  <li><a href="libros/programacion-libro2.pdf">Libro 2 de Programación</a></li>
-                  <li><a href="libros/programacion-libro3.pdf">Libro 3 de Programación</a></li>
-                </ul>
-              </div>
-              
-            </div>
-          </div>
-        </section>
-
-        <!--/.WORK END-->
-
-
-
-        <!--SERVICES-->
-        <section class="white-bg" id="services">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <h3 class="title-small">
-                  <span>Servicios</span>
-                </h3>
-                <p class="content-detail">
-                  Ofrecemos servicios de asesoría en ciencias para jóvenes que deseen desarrollar habilidades técnicas avanzadas en áreas como ciencia de datos, matemática, física, estadística, programación e inteligencia artificial. Nuestro equipo de expertos en ciencias está altamente capacitado y comprometido a ayudarte a alcanzar tus metas y desafiar tus límites. Trabajaremos contigo de manera personalizada y te proporcionaremos las herramientas y el apoyo que necesitas para sobresalir en tu campo. ¡Contáctanos hoy y comienza tu viaje hacia el éxito!.
-                </p>
-              </div>
-              <div class="col-md-9 content-right">
-                <div class="row">
-                  <ul class="listing-item">
-                    <li>
-                      <div class="col-md-4 col-sm-4">
-                        <h3 class="icon-use">
-                          c
-                        </h3>
-                        <p class="head-sm">
-                          Asesoria
-                        </p>
-                        <p class="text-grey">
-                          Nuestra equipo ofrece servicios de asesoría de alta calidad en áreas de fisica, matematica y estadistica. Nos enfocamos en ayudarte a alcanzar tus objetivos y maximizar tu potencial. 
-                        </p>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div class="col-md-4 col-sm-4">
-                        <h3 class="icon-use">
-                          b
-                        </h3>
-                        <p class="head-sm">
-                          Clases personalizadas
-                        </p>
-                        <p class="text-grey">
-                          Ofrecemos clases personalizadas que se adaptan a tus necesidades y ritmo de aprendizaje. Nuestro equipo de profesionales altamente capacitados está aquí para ayudarte a desarrollar tus habilidades y conocimientos en tu campo de interés.
-                        </p>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div class="col-md-4 col-sm-4">
-                        <h3 class="icon-use">
-                          d
-                        </h3>
-                        <p class="head-sm">
-                          Resolucion de trabajos 
-                        </p>
-                        <p class="text-grey">
-                          Nuestro equipo está aquí para ayudarte a resolver trabajos, tareas y exámenes en tiempo récord. Somos expertos en una variedad de temas y disciplinas, y estamos comprometidos a proporcionarte soluciones de alta calidad y personalizadas para ayudarte a alcanzar tus objetivos académicos.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-
-                  <ul class="listing-item">
-                    <li>
-                      <div class="col-md-4 col-sm-4">
-                        <p class="icon-use">
-                          f
-                        </p>
-                        <p class="head-sm">
-                          Programación
-                        </p>
-                        <p class="text-grey">
-                          Ofrecemos servicios de programación en Python, MATLAB, R y LaTeX para ayudarte a desarrollar tus habilidades técnicas en áreas de ciencias, ingeniería y negocios. Nuestro equipo de programadores altamente capacitados está aquí para ayudarte a crear soluciones personalizadas y efectivas para tus necesidades específicas.
-                        </p>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div class="col-md-4 col-sm-4">
-                        <h3 class="icon-use">
-                          p
-                        </h3>
-                        <p class="head-sm">
-                          Diseño grafico
-                        </p>
-                        <p class="text-grey">
-                          Nuestro equipo ofrece servicios de diseño gráfico en CorelDRAW, Inkscape, Photoshop e Illustrator de alta calidad y profesionalismo. Nos enfocamos en crear diseños únicos y personalizados que se adapten a tus necesidades y estilo de marca. Trabajamos de la mano contigo para asegurarnos de que cada diseño sea atractivo y efectivo 
-                        </p>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div class="col-md-4 col-sm-4">
-                        <h3 class="icon-use">
-                          m
-                        </h3>
-                        <p class="head-sm">
-                          Investigación
-                        </p>
-                        <p class="text-grey">
-                          En nuestra marca, contamos con un equipo de jóvenes talentosos y dedicados al estudio en constante búsqueda de la excelencia. Nos enfocamos en la investigación y la constante actualización de información científica para estar al día en los últimos avances y tendencias. Nuestro objetivo es brindar soluciones efectivas a través de nuestra experiencia y conocimientos. 
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!--/.SERVICES END-->
-
-        <!--EMPLOYEMENT-->
-        <section class="grey-bg" id="employement">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <h3 class="title-small">
-                  <span>Nuestra misión</span>
-                </h3>
-                <p class="content-detail">
-                  Nuestra misión es promover y fomentar el uso y aplicación de la ciencia en todas sus formas, a través del conocimiento y habilidades que hemos adquirido como estudiantes. Buscamos brindar información precisa, actualizada y de calidad que permita a nuestros lectores expandir sus conocimientos en diferentes áreas científicas. Nos esforzamos por hacer que la ciencia sea más accesible y comprensible para todos, y creemos que el conocimiento científico puede ser utilizado para mejorar la calidad de vida de las personas y contribuir al desarrollo sostenible del mundo en que vivimos.
-                </p>
-              </div>
-              <div class="col-md-9 content-right">
-                <div class="row">
-                  <ul class="listing-item">
-                    <li>
-                      <div class="col-md-6 col-sm-6">
-                        <div class="wrap-card">
-                          <div class="card">
-                            <h2 class="year">
-                              Matemáticas
-                            </h2>
-                            <p class="job">
-                              Matemáticos y estudiantes capacitados 
-                            </p>
-                            <p class="company">
-                              Excelencia
-                            </p>
-                            <hr>
-                            <div class="text-detail">
-                              <p>
-                                Ofrecemos cursos de Matemáticas personalizados y dirigidos por expertos en el campo para estudiantes de todos los niveles. Nuestros métodos innovadores y flexibles permiten a los clientes mejorar sus habilidades matemáticas, prepararse para exámenes y ampliar sus conocimientos.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div class="col-md-6 col-sm-6">
-                        <div class="wrap-card">
-                          <div class="card">
-                            <h2 class="year">
-                              Física 
-                            </h2>
-                            <p class="job">
-                              Físicos y estudiantes capacitados
-                            </p>
-                            <p class="company">
-                              Gran nivel
-                            </p>
-                            <hr>
-                            <div class="text-detail">
-                              <p>
-                                Ofrecemos cursos de Física para estudiantes de todos los niveles, con expertos profesores, materiales interactivos y una plataforma fácil de usar. Aprende a tu ritmo, desde la comodidad de tu hogar y con el apoyo de nuestra comunidad. Contáctanos para mejorar tus conocimientos de Física.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>  
-                  <ul class="listing-item">
-                    <li>
-                      <div class="col-md-6 col-sm-6">
-                        <div class="wrap-card">
-                          <div class="card">
-                            <h2 class="year">
-                              Programación
-                            </h2>
-                            <p class="job">
-                              Programadores aplicando ciencia
-                            </p>
-                            <p class="company">
-                              Confianza
-                            </p>
-                            <hr>
-                            <div class="text-detail">
-                              <p>
-                                Ofrecemos cursos de programación con Python y R, dos lenguajes esenciales en el mercado laboral. Nuestros cursos enseñan desde los conceptos básicos hasta aplicaciones avanzadas en áreas como análisis de datos e inteligencia artificial. Los clientes pueden mejorar su perfil profesional o crear proyectos propios con estas habilidades prácticas.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div class="col-md-6 col-sm-6">
-                        <div class="wrap-card">
-                          <div class="card">
-                            <h2 class="year">
-                              Diseño grafico
-                            </h2>
-                            <p class="job">
-                              Diseñadores graficos capacitados
-                            </p>
-                            <p class="company">
-                              Diseñadores graficos capacitados
-                            </p>
-                            <hr>
-                            <div class="text-detail">
-                              <p>
-                                Nuestra empresa ofrece cursos de programación con Corel, Photoshop e Illustrator, que son herramientas de diseño gráfico muy populares y versátiles. Con estos cursos, nuestros clientes pueden aprender a crear y editar imágenes, logos, ilustraciones, animaciones y más. Estas habilidades les permiten mejorar su comunicación visual, expresar su creatividad y potenciar sus proyectos personales o profesionale
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!--/.EMPLOYEMENT END-->
-
-        <!--SKILLS-->
-        <section class="white-bg" id="skill">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <h3 class="title-small">
-                  <span>Nuestras habilidades</span>
-                </h3>
-                <p class="content-detail">
-                  Nuestras habilidades son específicas
-                </p>
-              </div>
-              <div class="col-md-9 content-right">
-                <!--SKILLST-->
-                <div class="skillst">
-                  <div class="skillbar" data-percent="78%">
-                    <div class="title head-sm">
-                      Matemáticas
-                    </div>
-                    <div class="count-bar">
-                      <div class="count"></div>
-                    </div>
-                  </div>
-                  <div class="skillbar" data-percent="91%">
-                    <div class="title head-sm">
-                      Fisica
-                    </div>
-                    <div class="count-bar">
-                      <div class="count"></div>
-                    </div>
-                  </div>
-                  <div class="skillbar" data-percent="58%">
-                    <div class="title head-sm">
-                      Estadistica
-                    </div>
-                    <div class="count-bar">
-                      <div class="count"></div>
-                    </div>
-                  </div>
-                  <div class="skillbar" data-percent="63%">
-                    <div class="title head-sm">
-                      Programación
-                    </div>
-                    <div class="count-bar">
-                      <div class="count"></div>
-                    </div>
-                  </div>
-                  <div class="skillbar" data-percent="65%">
-                    <div class="title head-sm">
-                      Diseño grafico
-                    </div>
-                    <div class="count-bar">
-                      <div class="count"></div>
-                    </div>
-                  </div>
-                </div>
-                <!--/.SKILLST END-->
-              </div>
-            </div>
-          </div>
-        </section>
-        <!--/.SKILLS END-->
-
-        <!--EDUCATION-->
-        <section class="grey-bg" id="education">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <h3 class="title-small">
-                  <span>Education</span>
-                </h3>
-                <p class="content-detail">
-                  Nos dedicamos a utilizar softwares científicos para la educación y la ciencia con el objetivo de ofrecer soluciones de alta calidad que satisfagan las necesidades de nuestros clientes. Nos enorgullecemos de nuestra excelencia, dedicación y compromiso, lo que nos permite demostrar un fuerte enfoque en la calidad y la precisión en todo lo que hacemos.
-                </p>
-              </div>
-              <div class="col-md-9 content-right">
-                <div class="row">
-                  <ul class="listing-item">
-                    <li>
-                      <div class="col-md-6 col-sm-6">
-                        <div class="wrap-card">
-                          <div class="card">
-                            <h2 class="year">
-                              LaTeX
-                            </h2>
-                            <p class="job">
-                              Redacción
-                            </p>
-                            <p class="company">
-                              Software libre
-                            </p>
-                            <hr>
-                            <div class="text-detail">
-                              <p>
-                                LaTeX es un software gratuito para crear documentos profesionales de alta calidad. Con LaTeX, uestros ueden escribir textos científicos, técnicos, académicos y creativos con facilidad y precisión. LaTeX tiene muchas ventajas sobre los procesadores de texto convencionales, como la facilidad para insertar fórmulas matemáticas, gráficos, tablas y referencias. Además, LaTeX es compatible con múltiples formatos y plataformas, lo que facilita la colaboración y la publicación de los documentos.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div class="col-md-6 col-sm-6">
-                        <div class="wrap-card">
-                          <div class="card">
-                            <h2 class="year">
-                              Python
-                            </h2>
-                            <p class="job">
-                              Programación
-                            </p>
-                            <p class="company">
-                              Software libre
-                            </p>
-                            <hr>
-                            <div class="text-detail">
-                              <p>
-                                Nos dedicamos a enseñar con Python, un lenguaje de programación de alto nivel que se usa ampliamente en la ciencia de datos y el aprendizaje profundo. Nuestros clientes pueden aprovechar el potencial de este software gratuito para desarrollar y evaluar modelos de redes neuronales avanzados con librerías como Tensorflow y Keras. Con Python, pueden resolver problemas reales de visión por computador, procesamiento del lenguaje natural y otras aplicaciones científicas.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                  <ul class="listing-item">
-                    <li>
-                      <div class="col-md-6 col-sm-6">
-                        <div class="wrap-card">
-                          <div class="card">
-                            <h2 class="year">
-                              R
-                            </h2>
-                            <p class="job">
-                              Programación
-                            </p>
-                            <p class="company">
-                              Software libre
-                            </p>
-                            <hr>
-                            <div class="text-detail">
-                              <p>
-                                R es un software gratuito y de código abierto para el análisis estadístico y la creación de aplicaciones científicas. Con R, nuestros clientes pueden realizar desde tareas simples como calcular medias y desviaciones estándar, hasta proyectos complejos como modelar datos, visualizar resultados y desarrollar aplicaciones interactivas. R es una herramienta poderosa y versátil que se adapta a las necesidades de cada usuario.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div class="col-md-6 col-sm-6">
-                        <div class="wrap-card">
-                          <div class="card">
-                            <h2 class="year">
-                              MATLAB
-                            </h2>
-                            <p class="job">
-                              Programación
-                            </p>
-                            <p class="company">
-                              software matemático
-                            </p>
-                            <hr>
-                            <div class="text-detail">
-                              <p>
-                                Ofrecemos cursos de capacitación en Matlab, un software para cálculos matemáticos y aplicaciones científicas eficientes. Aprenderás a usar herramientas y funciones para resolver problemas de estadística, álgebra lineal, análisis de datos, simulación y más. Contamos con instructores expertos en Matlab con experiencia académica y profesional. Brindamos una formación personalizada y de calidad para cada cliente.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!--/.EDUCATION END-->
-
-        <!--TESTIMONIAL-->
-        <section id="testimonial">
-          <div class="container">
-            <div class="row wrap-testimonial">
-              <div class="col-md-10 col-md-offset-1">
-                <div class="owl-carousel">
-                  <div class="list-testimonial">
-                    <div class="content-testimonial">
-                      <h3 class="testi">
-                        “ La física es como el sexo: seguro, que puede tener resultados prácticos, pero no es por eso que lo hacemos. ”
-                      </h3>
-                      <p class="people">
-                         Richard Feynman
-                      </p>
-                    </div>
-                  </div>
-                  <div class="list-testimonial">
-                    <div class="content-testimonial">
-                      <h3 class="testi">
-                        “ El fracaso es una opción aquí. Si las cosas no fallan, no estás innovando lo suficiente. ”
-                      </h3>
-                      <p class="people">
-                        Elon Musk
-                      </p>
-                    </div>
-                  </div>
-                  <div class="list-testimonial">
-                    <div class="content-testimonial">
-                      <h3 class="testi">
-                        “ El gran beneficio de la inteligencia artificial es que elimina el factor humano en el proceso de toma de decisiones. ”
-                      </h3>
-                      <p class="people">
-                        Bjorn Lomborg
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mask-testimonial"></div>
-        </section>
-        <!--/.TESTMONIAL END-->
-
-        <!--BLOG-->
-        <section class="grey-bg" id="blog">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <h3 class="title-small-center text-center">
-                  <span>Blog</span>
-                </h3>
-                <div class="row">
-                  <div class="col-md-6 col-md-offset-3">
-                    <p class="content-details text-center">
-                      El aprendizaje nunca termina, siempre hay algo nuevo que descubrir en el mundo de las ciencias y la IA. 
-                    </p>
-                  </div>
-                </div>
-                <!--GRID BLOG-->
-                <div class="grid">
-                  <div class="grid-item">
-                    <div class="wrap-article">
-                      <img alt="blog-1" class="img-circle text-center" src="images/blog-1.png">
-                      <p class="subtitle fancy">
-                        <span>FISICO</span>
-                      </p>
-                      <a href="#">
-                        <h3 class="title">
-                          Cristian Flores
-                        </h3>
-                      </a>
-                      <p class="content-blog">
-                        Perseverancia hacia los propositos.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="grid-item">
-                    <div class="wrap-article">
-                     <img alt="blog-4" class="img-circle text-center" src="images/blog-4.jpg">
-                     <p class="subtitle fancy">
-                        <span>MATEMATICO</span>
-                      </p>
-                      <a href="#">
-                        <h3 class="title">
-                          Alberto Morote
-                        </h3>
-                      </a>
-                      <p class="content-blog">
-                        Pasiente y activo. 
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="grid-item">
-                    <div class="wrap-article">
-                      <img alt="blog6" class="img-circle text-center" src="images/blog-6.jpg">
-                      <p class="subtitle fancy">
-                        <span>MATEMATICA</span>
-                      </p>
-                      <a href="#">
-                        <h3 class="title">
-                          Nataly Moreno
-                        </h3>
-                      </a>
-                      <p class="content-blog">
-                       Lorem ipsum dolor sit amet. 
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div class="grid-item">
-                    <div class="wrap-article">
-                      <img alt="blog2" class="img-circle text-center" src="images/blog-2.jpg">
-                      <p class="subtitle fancy">
-                        <span>MATEMATICO</span>
-                      </p>
-                      <a href="#">
-                        <h3 class="title">
-                          Hernan Rojas
-                        </h3>
-                      </a>
-                      <p class="content-blog">
-                        Guapo, nalgon y simp. 
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="grid-item">
-                    <div class="wrap-article">
-                      <img alt="blog5" class="img-circle text-center" src="images/blog-5.jpg">
-                      <p class="subtitle fancy">
-                        <span>MATEMATICO</span>
-                      </p>
-                      <a href="#">
-                        <h3 class="title">
-                          Peter Flores
-                        </h3>
-                      </a>
-                      <p class="content-blog">
-                        Crear novedades y alternativas. 
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="grid-item">
-                    <div class="wrap-article">
-                      <img alt="blog-3" class="img-circle text-center" src="images/blog-3.jpg">
-                      <p class="subtitle fancy">
-                        <span>FISICO</span>
-                      </p>
-                      <a href="#">
-                        <h3 class="title">
-                          Abel Rojas
-                        </h3>
-                      </a>
-                      <p class="content-blog">
-                        Perseverancia.
-                      </p>
-                    </div>
-                  </div>    
-                  
-                  <div class="grid-item">
-                    <div class="wrap-article">
-                      <img alt="blog2" class="img-circle text-center" src="images/blog-2.jpg">
-                      <p class="subtitle fancy">
-                        <span>FISICO</span>
-                      </p>
-                      <a href="#">
-                        <h3 class="title">
-                          Saul Meneses
-                        </h3>
-                      </a>
-                      <p class="content-blog">
-                        Teórico y desarrollador. 
-                      </p>
-                    </div>
-                  </div>
-
-                </div>
-                <!--/.GRID BLOG END-->
-              </div>
-            </div>
-          </div>
-        </section>
-        <!--/.BLOG END-->
-
-        <!--CONTACT-->
-        <section id="contact" class="white-bg">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <h3 class="title-small">
-                  <span>Contacto</span>
-                </h3>
-                <p class="content-detail">
-                  "Atrévete a descubrir un mundo de posibilidades en ciencia y educación con nuestro equipo de expertos, ¡contáctanos hoy mismo y juntos haremos realidad tus sueños académicos!"
-                </p>
-
-              </div>
-              <div class="col-md-9 content-right">
-                <form>
-                  <div class="group">
-                    <input required="" type="text"><span class="highlight"></span><span class="bar"></span><label>Name</label>
-                  </div>
-                  <div class="group">
-                    <input required="" type="email"><span class="highlight"></span><span class="bar"></span><label>Email</label>
-                  </div>
-                  <div class="group">
-                    <textarea required=""></textarea><span class="highlight"></span><span class="bar"></span><label>Message</label>
-                  </div>
-                  <input id="sendMessage" name="sendMessage" type="submit" value="Send Message">
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!--/.CONTACT END-->
+    <style>
+        :root {
+            --neon-blue: #00f3ff;
+            --neon-purple: #bd00ff;
+            --neon-green: #00ff9d;
+            --dark-bg: #050505;
+        }
         
-        <!--FOOTER-->
-        <footer>
-          <div class="footer-top">
-            <ul class="socials">
-              <li class="facebook">
-                <a href="#" data-hover="Facebook">Facebook</a>
-              </li>
-              <li class="twitter">
-                <a href="#" data-hover="Twitter">Twitter</a>
-              </li>
-              <li class="gplus">
-                <a href="#" data-hover="Google +">Google +</a>
-              </li>
-            </ul>
-          </div>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
 
-          <div class="footer-bottom">
-            <div class="container">
-              <div class="row">
-                <a href="https://dcrazed.com/"><img src="images/logo-bottom.png" alt="crafted with love" class="center-block" /></a>
-			 </div>
+        h1, h2, h3, .brand, .font-tech {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        /* Canvas 3D Background */
+        #canvas-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at center, #1a1a2e 0%, #000000 100%);
+        }
+
+        /* Glassmorphism Utilities */
+        .glass {
+            background: rgba(20, 20, 30, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+        
+        .glass-nav {
+            background: rgba(5, 5, 5, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Neon Text & Effects */
+        .text-neon-blue { color: var(--neon-blue); text-shadow: 0 0 15px rgba(0, 243, 255, 0.4); }
+        .text-neon-purple { color: var(--neon-purple); text-shadow: 0 0 15px rgba(189, 0, 255, 0.4); }
+        .text-neon-green { color: var(--neon-green); text-shadow: 0 0 15px rgba(0, 255, 157, 0.4); }
+
+        .btn-neon {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: transparent;
+            border: 1px solid var(--neon-blue);
+            color: var(--neon-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-neon:hover {
+            background: var(--neon-blue);
+            color: black;
+            box-shadow: 0 0 25px rgba(0, 243, 255, 0.5);
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.15);
+        }
+
+        .skill-bar-bg {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 999px;
+            overflow: hidden;
+            height: 8px;
+        }
+
+        .skill-bar-fill {
+            height: 100%;
+            border-radius: 999px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-bar-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+            transform: translateX(-100%);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            100% { transform: translateX(100%); }
+        }
+
+        /* Cursor */
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--neon-blue);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s, background 0.3s;
+            mix-blend-mode: difference;
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .custom-cursor { display: block; }
+        }
+        
+        .cursor-active {
+            transform: translate(-50%, -50%) scale(1.8);
+            background: rgba(0, 243, 255, 0.2);
+            border-color: var(--neon-purple);
+        }
+
+        /* Utilities */
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--neon-purple);
+            box-shadow: 0 0 10px var(--neon-purple);
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--neon-blue); }
+    </style>
+</head>
+<body>
+
+    <div id="cursor" class="custom-cursor"></div>
+    <div id="canvas-container"></div>
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 cursor-pointer brand text-2xl tracking-wider text-white font-bold">
+                    MOEBIUS<span class="text-neon-blue">.FÍSICO-MATEMÁTICOS</span>
+                </div>
+                <div class="hidden lg:block">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="#home" class="hover:text-neon-blue px-2 py-2 text-sm font-medium transition-colors uppercase tracking-wider">Home</a>
+                        <a href="#about" class="hover:text-neon-blue px-2 py-2 text-sm font-medium transition-colors uppercase tracking-wider">Visión</a>
+                        <a href="#work" class="hover:text-neon-blue px-2 py-2 text-sm font-medium transition-colors uppercase tracking-wider">Trabajo</a>
+                        <a href="#services" class="hover:text-neon-blue px-2 py-2 text-sm font-medium transition-colors uppercase tracking-wider">Servicios</a>
+                        <a href="#education" class="hover:text-neon-blue px-2 py-2 text-sm font-medium transition-colors uppercase tracking-wider">Educación</a>
+                        <a href="#team" class="hover:text-neon-blue px-2 py-2 text-sm font-medium transition-colors uppercase tracking-wider">Equipo</a>
+                        <a href="#contact" class="btn-neon px-5 py-2 rounded-full text-xs font-bold ml-4">Contacto</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button (placeholder) -->
+                <div class="lg:hidden">
+                    <button class="text-white hover:text-neon-blue"><i class="ph ph-list text-3xl"></i></button>
+                </div>
             </div>
-          </div>
-        </footer>
-        <!--/.FOOTER-END-->
+        </div>
+    </nav>
 
-      <!--/.CONTENT END-->
-      </div>
-    <!--/.CONTENT-WRAP END-->
-    </div>
-    
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20">
+        <div class="text-center z-10 px-4 max-w-4xl">
+            <div class="mb-6 inline-block glass px-6 py-2 rounded-full border-neon-blue/30">
+                <span class="text-neon-blue tracking-widest text-xs font-bold uppercase">Startup para la ciencia</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight text-white">
+                Innovación <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple">Científica</span><br>
+                Digital
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+                Difundimos conocimientos en ciencia de datos, matemática, física e inteligencia artificial para promover el desarrollo tecnológico.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="#services" class="btn-neon px-8 py-4 rounded text-sm font-bold tracking-wider uppercase">
+                    Nuestros Servicios
+                </a>
+                <a href="#work" class="glass hover:bg-white/10 text-white px-8 py-4 rounded text-sm font-bold tracking-wider uppercase transition-all border border-white/20 flex items-center justify-center gap-2">
+                    Ver Trabajo <i class="ph ph-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
-    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="js/jquery.appear.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/classie.js" type="text/javascript"></script>
-    <script src="js/owl.carousel.min.js" type="text/javascript"></script>
-    <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
-    <script src="js/masonry.pkgd.min.js" type="text/javascript"></script>
-    <script src="js/masonry.js" type="text/javascript"></script>
-    <script src="js/smooth-scroll.min.js" type="text/javascript"></script>
-    <script src="js/typed.js" type="text/javascript"></script>
-    <script src="js/main.js" type="text/javascript"></script>
-  </body>
+    <!-- Visión / Información -->
+    <section id="about" class="py-24 relative z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="glass rounded-3xl p-8 md:p-16 border-l-4 border-l-neon-purple">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="w-full md:w-1/2">
+                        <h2 class="section-title text-3xl md:text-4xl font-bold mb-6">Nuestra <span class="text-neon-purple">Visión</span></h2>
+                        <p class="text-gray-300 leading-relaxed text-lg mb-6">
+                            Nuestra visión empresarial es difundir conocimientos en <span class="text-neon-blue">ciencia de datos, matemática, física, estadística y programación</span> en el Perú para promover la innovación y el desarrollo en el país.
+                        </p>
+                        <p class="text-gray-400 leading-relaxed">
+                            Queremos inspirar a otros a adquirir habilidades y conocimientos para tener un impacto positivo en la sociedad y ayudar a construir un futuro mejor.
+                        </p>
+                        <div class="mt-8 flex items-center gap-4">
+                            <div class="text-2xl font-tech text-white">Moebius</div>
+                            <div class="h-px bg-gray-600 flex-grow"></div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
+                        <div class="glass p-6 rounded-xl text-center">
+                            <i class="ph ph-map-pin text-3xl text-neon-blue mb-2"></i>
+                            <p class="text-sm text-gray-400">Ayacucho, Perú</p>
+                        </div>
+                        <div class="glass p-6 rounded-xl text-center">
+                            <i class="ph ph-envelope-simple text-3xl text-neon-purple mb-2"></i>
+                            <p class="text-sm text-gray-400">Moebius@bussines.com</p>
+                        </div>
+                        <div class="glass p-6 rounded-xl text-center col-span-2">
+                            <i class="ph ph-whatsapp-logo text-3xl text-neon-green mb-2"></i>
+                            <p class="text-sm text-gray-400">+51 935 027 265</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trabajo / Portafolio -->
+    <section id="work" class="py-24 relative z-10 bg-black/40">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4"><span class="text-neon-blue">Nuestro</span> Trabajo</h2>
+                <p class="text-gray-400 max-w-3xl mx-auto">
+                    Somos jóvenes de la facultad de ciencias físico-matemáticas. Hemos dedicado años a adquirir conocimientos avanzados y habilidades técnicas para construir una plataforma accesible.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card Work 1 -->
+                <div class="glass p-6 rounded-xl card-hover group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
+                        <i class="ph ph-paint-brush-broad text-6xl text-neon-purple"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 mt-8 relative z-10">Diseño Gráfico</h3>
+                    <div class="h-1 w-10 bg-neon-purple mb-4"></div>
+                    <p class="text-gray-400 text-sm relative z-10">Comunicación visual científica de alto impacto.</p>
+                </div>
+                <!-- Card Work 2 -->
+                <div class="glass p-6 rounded-xl card-hover group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
+                        <i class="ph ph-code text-6xl text-neon-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 mt-8 relative z-10">Python</h3>
+                    <div class="h-1 w-10 bg-neon-blue mb-4"></div>
+                    <p class="text-gray-400 text-sm relative z-10">Desarrollo de scripts para análisis de datos.</p>
+                </div>
+                <!-- Card Work 3 -->
+                <div class="glass p-6 rounded-xl card-hover group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
+                        <i class="ph ph-function text-6xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 mt-8 relative z-10">LaTeX</h3>
+                    <div class="h-1 w-10 bg-white mb-4"></div>
+                    <p class="text-gray-400 text-sm relative z-10">Redacción académica y científica profesional.</p>
+                </div>
+                 <!-- Card Work 4 -->
+                 <div class="glass p-6 rounded-xl card-hover group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
+                        <i class="ph ph-pi text-6xl text-neon-green"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 mt-8 relative z-10">Matemáticas</h3>
+                    <div class="h-1 w-10 bg-neon-green mb-4"></div>
+                    <p class="text-gray-400 text-sm relative z-10">Modelado y resolución de problemas complejos.</p>
+                </div>
+                <!-- Card Work 5 -->
+                <div class="glass p-6 rounded-xl card-hover group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
+                        <i class="ph ph-atom text-6xl text-orange-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 mt-8 relative z-10">Física</h3>
+                    <div class="h-1 w-10 bg-orange-500 mb-4"></div>
+                    <p class="text-gray-400 text-sm relative z-10">Simulaciones y análisis de fenómenos físicos.</p>
+                </div>
+                <!-- Card Work 6 -->
+                <div class="glass p-6 rounded-xl card-hover group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
+                        <i class="ph ph-chart-bar text-6xl text-blue-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 mt-8 relative z-10">Lenguaje R</h3>
+                    <div class="h-1 w-10 bg-blue-500 mb-4"></div>
+                    <p class="text-gray-400 text-sm relative z-10">Estadística avanzada y ciencia de datos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="services" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row gap-16">
+                <div class="md:w-1/3">
+                    <h2 class="section-title text-3xl md:text-4xl font-bold mb-6">Servicios <span class="text-neon-purple">Premium</span></h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Ofrecemos servicios de asesoría en ciencias para jóvenes que deseen desarrollar habilidades técnicas avanzadas. Trabajaremos contigo de manera personalizada.
+                    </p>
+                    <div class="p-6 glass rounded-xl border border-neon-blue/30">
+                        <h4 class="font-bold text-white mb-2">¿Por qué nosotros?</h4>
+                        <ul class="text-sm text-gray-400 space-y-2">
+                            <li class="flex items-center"><i class="ph ph-check text-neon-green mr-2"></i> Expertos en ciencias</li>
+                            <li class="flex items-center"><i class="ph ph-check text-neon-green mr-2"></i> Enfoque personalizado</li>
+                            <li class="flex items-center"><i class="ph ph-check text-neon-green mr-2"></i> Tecnología de punta</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Service Item -->
+                    <div class="glass p-6 rounded-lg hover:bg-white/5 transition-colors">
+                        <i class="ph ph-chalkboard-teacher text-4xl text-neon-blue mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Asesoría Académica</h3>
+                        <p class="text-gray-400 text-sm">Servicios de alta calidad en áreas de física, matemáticas y estadística para maximizar tu potencial.</p>
+                    </div>
+                    <!-- Service Item -->
+                    <div class="glass p-6 rounded-lg hover:bg-white/5 transition-colors">
+                        <i class="ph ph-student text-4xl text-neon-purple mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Clases Personalizadas</h3>
+                        <p class="text-gray-400 text-sm">Adaptadas a tus necesidades y ritmo. Nuestro equipo te ayuda a desarrollar habilidades sólidas.</p>
+                    </div>
+                    <!-- Service Item -->
+                    <div class="glass p-6 rounded-lg hover:bg-white/5 transition-colors">
+                        <i class="ph ph-file-text text-4xl text-neon-green mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Resolución de Trabajos</h3>
+                        <p class="text-gray-400 text-sm">Ayuda experta para resolver tareas y exámenes complejos en tiempo récord con alta precisión.</p>
+                    </div>
+                    <!-- Service Item -->
+                    <div class="glass p-6 rounded-lg hover:bg-white/5 transition-colors">
+                        <i class="ph ph-terminal-window text-4xl text-white mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Programación</h3>
+                        <p class="text-gray-400 text-sm">Python, MATLAB, R y LaTeX para ciencia, ingeniería y negocios.</p>
+                    </div>
+                    <!-- Service Item -->
+                    <div class="glass p-6 rounded-lg hover:bg-white/5 transition-colors">
+                        <i class="ph ph-pencil-circle text-4xl text-orange-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Diseño Gráfico</h3>
+                        <p class="text-gray-400 text-sm">Diseños únicos usando CorelDRAW, Inkscape, Photoshop e Illustrator.</p>
+                    </div>
+                    <!-- Service Item -->
+                    <div class="glass p-6 rounded-lg hover:bg-white/5 transition-colors">
+                        <i class="ph ph-flask text-4xl text-pink-500 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Investigación</h3>
+                        <p class="text-gray-400 text-sm">Constante actualización científica para brindar soluciones efectivas basadas en investigación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Misión y Habilidades -->
+    <section class="py-24 relative z-10 bg-gradient-to-b from-transparent to-black/80">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <!-- Misión -->
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Nuestra <span class="text-neon-blue">Misión</span></h2>
+                    <div class="glass p-8 rounded-2xl border-t border-neon-blue">
+                        <p class="text-gray-300 mb-6 leading-relaxed">
+                            Promover y fomentar el uso y aplicación de la ciencia en todas sus formas. Buscamos brindar información precisa, actualizada y de calidad.
+                        </p>
+                        <p class="text-gray-300 leading-relaxed">
+                            Creemos que el conocimiento científico puede ser utilizado para mejorar la calidad de vida de las personas y contribuir al desarrollo sostenible del mundo.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Habilidades -->
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white">Habilidades <span class="text-neon-green">Técnicas</span></h2>
+                    <div class="space-y-6">
+                        <!-- Skill 1 -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-white font-bold">Matemáticas</span>
+                                <span class="text-neon-blue">78%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill bg-neon-blue" style="width: 78%"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 2 -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-white font-bold">Física</span>
+                                <span class="text-neon-purple">91%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill bg-neon-purple" style="width: 91%"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 3 -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-white font-bold">Estadística</span>
+                                <span class="text-neon-green">58%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill bg-neon-green" style="width: 58%"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 4 -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-white font-bold">Programación</span>
+                                <span class="text-white">63%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill bg-white" style="width: 63%"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 5 -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-white font-bold">Diseño Gráfico</span>
+                                <span class="text-orange-500">65%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill bg-orange-500" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educación -->
+    <section id="education" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Educación & <span class="text-neon-purple">Software</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Nos dedicamos a utilizar softwares científicos de vanguardia.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Education Item -->
+                <div class="glass p-8 rounded-2xl text-center card-hover border-t-2 border-white">
+                    <div class="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 text-white font-bold text-2xl">Tx</div>
+                    <h3 class="text-xl font-bold text-white">LaTeX</h3>
+                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-4 block">Redacción</span>
+                    <p class="text-gray-400 text-sm">Documentos profesionales de alta calidad, textos científicos y fórmulas matemáticas con precisión.</p>
+                </div>
+
+                <!-- Education Item -->
+                <div class="glass p-8 rounded-2xl text-center card-hover border-t-2 border-neon-blue">
+                    <div class="w-16 h-16 mx-auto bg-neon-blue/10 rounded-full flex items-center justify-center mb-4 text-neon-blue text-3xl"><i class="ph ph-snake"></i></div>
+                    <h3 class="text-xl font-bold text-white">Python</h3>
+                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-4 block">Ciencia de Datos</span>
+                    <p class="text-gray-400 text-sm">Análisis de datos, aprendizaje profundo con Tensorflow y Keras, y visión por computador.</p>
+                </div>
+
+                <!-- Education Item -->
+                <div class="glass p-8 rounded-2xl text-center card-hover border-t-2 border-blue-500">
+                    <div class="w-16 h-16 mx-auto bg-blue-500/10 rounded-full flex items-center justify-center mb-4 text-blue-500 font-bold text-2xl">R</div>
+                    <h3 class="text-xl font-bold text-white">R Stats</h3>
+                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-4 block">Estadística</span>
+                    <p class="text-gray-400 text-sm">Análisis estadístico robusto, modelado de datos y visualización de resultados complejos.</p>
+                </div>
+
+                <!-- Education Item -->
+                <div class="glass p-8 rounded-2xl text-center card-hover border-t-2 border-orange-500">
+                    <div class="w-16 h-16 mx-auto bg-orange-500/10 rounded-full flex items-center justify-center mb-4 text-orange-500 text-3xl"><i class="ph ph-grid-four"></i></div>
+                    <h3 class="text-xl font-bold text-white">MATLAB</h3>
+                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-4 block">Ingeniería</span>
+                    <p class="text-gray-400 text-sm">Cálculos matemáticos, álgebra lineal, simulación y aplicaciones científicas eficientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo (Antes Blog) -->
+    <section id="team" class="py-24 relative z-10 bg-black/50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="section-title text-3xl md:text-4xl font-bold mb-12">Nuestro <span class="text-neon-blue">Equipo</span></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Member 1 -->
+                <div class="glass p-6 rounded-xl flex items-center space-x-4 card-hover">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-neon-blue to-blue-900 flex items-center justify-center text-white text-xl font-bold">CF</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Christian Flores</h3>
+                        <p class="text-neon-blue text-xs uppercase">Co-Fundador</p>
+                    </div>
+                </div>
+                <!-- Member 2 -->
+                <div class="glass p-6 rounded-xl flex items-center space-x-4 card-hover">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-purple-900 flex items-center justify-center text-white text-xl font-bold">AM</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Alberto Morote</h3>
+                        <p class="text-neon-purple text-xs uppercase">Especialista Técnico</p>
+                    </div>
+                </div>
+                <!-- Member 3 -->
+                <div class="glass p-6 rounded-xl flex items-center space-x-4 card-hover">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-pink-500 to-pink-900 flex items-center justify-center text-white text-xl font-bold">NM</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Nataly Moreno</h3>
+                        <p class="text-pink-500 text-xs uppercase">Investigación</p>
+                    </div>
+                </div>
+                 <!-- Member 4 -->
+                 <div class="glass p-6 rounded-xl flex items-center space-x-4 card-hover">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-green-900 flex items-center justify-center text-white text-xl font-bold">HR</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Hernan Rojas</h3>
+                        <p class="text-neon-green text-xs uppercase">Matemático</p>
+                    </div>
+                </div>
+                 <!-- Member 5 -->
+                 <div class="glass p-6 rounded-xl flex items-center space-x-4 card-hover">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-500 to-orange-900 flex items-center justify-center text-white text-xl font-bold">PF</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Peter Flores</h3>
+                        <p class="text-yellow-500 text-xs uppercase">Matemático</p>
+                    </div>
+                </div>
+                 <!-- Member 6 -->
+                 <div class="glass p-6 rounded-xl flex items-center space-x-4 card-hover">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-cyan-900 flex items-center justify-center text-white text-xl font-bold">KC</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Kenlyr Cardenas</h3>
+                        <p class="text-cyan-500 text-xs uppercase">Físico</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios / Inspiración -->
+    <section class="py-20 relative z-10">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <i class="ph ph-quotes text-6xl text-gray-700 mb-8 block"></i>
+            <div class="glass p-10 rounded-3xl relative">
+                <p class="text-2xl text-white font-light italic mb-6">
+                    "La física es como el sexo: seguro, que puede tener resultados prácticos, pero no es por eso que lo hacemos."
+                </p>
+                <h4 class="text-neon-blue font-bold uppercase tracking-wider">— Richard Feynman</h4>
+            </div>
+            <div class="mt-8 flex justify-center gap-4 text-gray-500 text-sm">
+                <span>Elon Musk</span> • <span>Bjorn Lomborg</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" class="py-24 relative z-10">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">Contáctanos <span class="text-neon-purple">Hoy</span></h2>
+            <p class="text-gray-400 mb-10">
+                "Atrévete a descubrir un mundo de posibilidades en ciencia y educación."
+            </p>
+            
+            <div class="glass p-8 md:p-12 rounded-3xl shadow-2xl border border-white/5">
+                <form class="space-y-6" onsubmit="event.preventDefault(); alert('Mensaje enviado al equipo Moebius.');">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Nombre" class="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-blue transition-colors placeholder-gray-500">
+                        <input type="email" placeholder="Email" class="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-blue transition-colors placeholder-gray-500">
+                    </div>
+                    <textarea rows="4" placeholder="Mensaje..." class="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-blue transition-colors placeholder-gray-500"></textarea>
+                    <button type="submit" class="w-full btn-neon py-4 font-bold tracking-wider uppercase rounded-lg hover:scale-[1.02] active:scale-[0.98] transition-transform">
+                        Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 border-t border-gray-800 bg-black py-12">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <div class="text-2xl font-bold font-tech text-white">MOEBIUS</div>
+                <p class="text-gray-600 text-sm mt-1">Startup para la ciencia</p>
+            </div>
+            <div class="flex space-x-8 mt-4 md:mt-0">
+                <a href="#" class="text-gray-500 hover:text-blue-500 transition-colors text-xl"><i class="ph ph-facebook-logo"></i></a>
+                <a href="#" class="text-gray-500 hover:text-sky-500 transition-colors text-xl"><i class="ph ph-twitter-logo"></i></a>
+                <a href="#" class="text-gray-500 hover:text-red-500 transition-colors text-xl"><i class="ph ph-google-logo"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts 3D -->
+    <script>
+        // Custom Cursor
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        document.addEventListener('mousedown', () => cursor.classList.add('cursor-active'));
+        document.addEventListener('mouseup', () => cursor.classList.remove('cursor-active'));
+
+        const interactables = document.querySelectorAll('a, button, input, textarea, .card-hover');
+        interactables.forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('cursor-active'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-active'));
+        });
+
+        // THREE.JS SETUP
+        const scene = new THREE.Scene();
+        scene.fog = new THREE.FogExp2(0x050505, 0.002);
+
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        
+        const container = document.getElementById('canvas-container');
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        container.appendChild(renderer.domElement);
+
+        // Geometría TorusKnot
+        const geometry = new THREE.TorusKnotGeometry(12, 3, 100, 16);
+        const material = new THREE.MeshBasicMaterial({ 
+            color: 0x00f3ff, 
+            wireframe: true, 
+            transparent: true, 
+            opacity: 0.15 
+        });
+        const torusKnot = new THREE.Mesh(geometry, material);
+        scene.add(torusKnot);
+
+        // Partículas
+        const particlesGeometry = new THREE.BufferGeometry();
+        const particlesCount = 800;
+        const posArray = new Float32Array(particlesCount * 3);
+        for(let i = 0; i < particlesCount * 3; i++) {
+            posArray[i] = (Math.random() - 0.5) * 80; 
+        }
+        particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+        const particlesMaterial = new THREE.PointsMaterial({
+            size: 0.04,
+            color: 0xbd00ff,
+            transparent: true,
+            opacity: 0.6
+        });
+        const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+        scene.add(particlesMesh);
+
+        camera.position.z = 35;
+
+        let mouseX = 0;
+        let mouseY = 0;
+        let targetX = 0;
+        let targetY = 0;
+        const windowHalfX = window.innerWidth / 2;
+        const windowHalfY = window.innerHeight / 2;
+
+        document.addEventListener('mousemove', (event) => {
+            mouseX = (event.clientX - windowHalfX);
+            mouseY = (event.clientY - windowHalfY);
+        });
+
+        // Click Interaction
+        document.addEventListener('click', () => {
+            material.color.setHex(Math.random() * 0xffffff);
+            material.opacity = 0.6;
+            setTimeout(() => {
+                material.color.setHex(0x00f3ff);
+                material.opacity = 0.15;
+            }, 300);
+        });
+
+        const clock = new THREE.Clock();
+
+        function animate() {
+            requestAnimationFrame(animate);
+            const elapsedTime = clock.getElapsedTime();
+
+            targetX = mouseX * 0.001;
+            targetY = mouseY * 0.001;
+
+            torusKnot.rotation.y += 0.5 * (targetX - torusKnot.rotation.y);
+            torusKnot.rotation.x += 0.05 * (targetY - torusKnot.rotation.x);
+            torusKnot.rotation.z += 0.002;
+
+            particlesMesh.rotation.y = -mouseY * 0.0001;
+            particlesMesh.rotation.x = -mouseX * 0.0001;
+            
+            const scale = 1 + Math.sin(elapsedTime * 0.5) * 0.05;
+            torusKnot.scale.set(scale, scale, scale);
+
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+</body>
 </html>
