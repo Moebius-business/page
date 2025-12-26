@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moebius Math: Análisis Completo</title>
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -16,7 +17,9 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono:wght@400&display=swap"
+        rel="stylesheet">
 
     <style>
         :root {
@@ -30,12 +33,16 @@
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-dark);
             color: #e2e8f0;
-            background-image: 
-                radial-gradient(circle at 15% 50%, rgba(76, 29, 149, 0.08), transparent 25%), 
+            background-image:
+                radial-gradient(circle at 15% 50%, rgba(76, 29, 149, 0.08), transparent 25%),
                 radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.08), transparent 25%);
         }
 
-        h1, h2, h3, h4, .tech-font {
+        h1,
+        h2,
+        h3,
+        h4,
+        .tech-font {
             font-family: 'Space Grotesk', sans-serif;
         }
 
@@ -76,42 +83,101 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
-        mjx-container { color: #e2e8f0 !important; }
-        
-        .chart-container { position: relative; width: 100%; height: 400px; }
-        
+
+        mjx-container {
+            color: #e2e8f0 !important;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
+
         /* Custom Range Slider */
-        input[type=range] { -webkit-appearance: none; background: transparent; }
-        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 16px; width: 16px; border-radius: 50%; background: #ec4899; cursor: pointer; margin-top: -6px; box-shadow: 0 0 10px rgba(236, 72, 153, 0.8); }
-        input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 4px; cursor: pointer; background: #334155; border-radius: 2px; }
+        input[type=range] {
+            -webkit-appearance: none;
+            background: transparent;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: #ec4899;
+            cursor: pointer;
+            margin-top: -6px;
+            box-shadow: 0 0 10px rgba(236, 72, 153, 0.8);
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: #334155;
+            border-radius: 2px;
+        }
 
         /* Wheat Machine Animation */
         @keyframes grind {
-            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-            50% { transform: translateY(20px) rotate(180deg); opacity: 0.5; }
-            100% { transform: translateY(50px) rotate(360deg); opacity: 0; }
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateY(20px) rotate(180deg);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: translateY(50px) rotate(360deg);
+                opacity: 0;
+            }
         }
-        
+
         @keyframes flourFlow {
-            0% { height: 0; opacity: 0; }
-            50% { height: 40px; opacity: 1; }
-            100% { height: 40px; opacity: 0.8; }
+            0% {
+                height: 0;
+                opacity: 0;
+            }
+
+            50% {
+                height: 40px;
+                opacity: 1;
+            }
+
+            100% {
+                height: 40px;
+                opacity: 0.8;
+            }
         }
 
         .grain-particle {
-            width: 8px; height: 8px; background: #fbbf24; border-radius: 50%;
-            position: absolute; top: 10px; left: 50%;
+            width: 8px;
+            height: 8px;
+            background: #fbbf24;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 50%;
         }
-        .animating-grain { animation: grind 1s forwards; }
-        .flour-pile { animation: flourFlow 1s forwards; }
 
+        .animating-grain {
+            animation: grind 1s forwards;
+        }
+
+        .flour-pile {
+            animation: flourFlow 1s forwards;
+        }
     </style>
 
     <!-- Content: Full Restoration of Rigorous Info + Wheat Machine Example -->
     <!-- CONFIRMATION: NO SVG used. NO Mermaid. MathJax active. -->
 
 </head>
+
 <body class="antialiased selection:bg-fuchsia-500 selection:text-white">
 
     <!-- Navigation -->
@@ -119,14 +185,21 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center gap-4">
-                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center font-bold text-white shadow-lg shadow-purple-500/20">M</div>
-                    <span class="text-xl font-bold tracking-tight text-white tech-font">MOEBIUS<span class="font-light text-slate-400">.MATH</span></span>
+                    <div
+                        class="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center font-bold text-white shadow-lg shadow-purple-500/20">
+                        M</div>
+                    <span class="text-xl font-bold tracking-tight text-white tech-font">MOEBIUS<span
+                            class="font-light text-slate-400">.MATH</span></span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#contexto" class="text-sm font-medium text-slate-400 hover:text-white transition-colors">CONTEXTO</a>
-                    <a href="#teoria" class="text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors">TEORÍA</a>
-                    <a href="#laboratorio" class="text-sm font-medium text-slate-400 hover:text-white transition-colors">LABORATORIO</a>
-                    <a href="#historia" class="text-sm font-medium text-slate-400 hover:text-white transition-colors">HISTORIA</a>
+                    <a href="#contexto"
+                        class="text-sm font-medium text-slate-400 hover:text-white transition-colors">CONTEXTO</a>
+                    <a href="#teoria"
+                        class="text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors">TEORÍA</a>
+                    <a href="#laboratorio"
+                        class="text-sm font-medium text-slate-400 hover:text-white transition-colors">LABORATORIO</a>
+                    <a href="#historia"
+                        class="text-sm font-medium text-slate-400 hover:text-white transition-colors">HISTORIA</a>
                 </div>
             </div>
         </div>
@@ -135,25 +208,32 @@
     <!-- Hero Section -->
     <header class="relative min-h-[70vh] flex items-center justify-center pt-20 overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse" style="animation-delay: 2s"></div>
+            <div
+                class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse">
+            </div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse"
+                style="animation-delay: 2s"></div>
         </div>
 
         <div class="max-w-5xl mx-auto px-6 relative z-10 text-center">
-            <div class="inline-block mb-6 px-4 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 backdrop-blur-sm">
-                <span class="text-xs font-bold tracking-[0.2em] text-purple-300 uppercase">Investigación Académica</span>
+            <div
+                class="inline-block mb-6 px-4 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 backdrop-blur-sm">
+                <span class="text-xs font-bold tracking-[0.2em] text-purple-300 uppercase">Investigación
+                    Académica</span>
             </div>
-            
+
             <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight tracking-tight">
                 El Lado <span class="text-gradient">Desconocido</span> de una <br> Función y su Bello Comportamiento
             </h1>
-            
+
             <p class="text-xl text-slate-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-                Una formalización rigurosa del vínculo entre la abstracción matemática pura y su manifestación dinámica en la naturaleza.
+                Una formalización rigurosa del vínculo entre la abstracción matemática pura y su manifestación dinámica
+                en la naturaleza.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto text-sm text-slate-500 font-mono border-t border-white/5 pt-8">
-                <div>Flores, Parihuaman, et al.</div>
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto text-sm text-slate-500 font-mono border-t border-white/5 pt-8">
+                <div>P. Flores, et al.(2025)</div>
                 <div>Ing. Minas, Geología y Civil</div>
                 <div>UNSCH</div>
             </div>
@@ -165,26 +245,34 @@
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                 <div>
-                    <span class="text-pink-500 font-bold tracking-widest text-xs uppercase mb-4 block">01 / PLANTEAMIENTO</span>
+                    <span class="text-pink-500 font-bold tracking-widest text-xs uppercase mb-4 block">01 /
+                        PLANTEAMIENTO</span>
                     <h2 class="text-4xl font-bold text-white mb-6 tech-font">La Disonancia Cognitiva</h2>
                     <div class="prose prose-invert prose-lg text-slate-400">
                         <p class="mb-6">
-                            El artículo postula que la función matemática, frecuentemente enseñada como un constructo puramente abstracto y frío, posee una <strong class="text-purple-400">"adherencia genuina"</strong> a la naturaleza que suele ser ignorada en el aula. 
+                            El artículo postula que la función matemática, frecuentemente enseñada como un constructo
+                            puramente abstracto y frío, posee una <strong class="text-purple-400">"adherencia
+                                genuina"</strong> a la naturaleza que suele ser ignorada en el aula.
                         </p>
                         <p class="mb-6">
-                            Esta desconexión genera una barrera epistemológica significativa. Los estudiantes se encuentran con el símbolo \( f(x) \) sin comprender que representa un fenómeno vivo. El texto cuestiona: <em>¿Se puede describir una función de manera más concisa para que en la primera experiencia el investigador comprenda su majestad?</em>
+                            Esta desconexión genera una barrera epistemológica significativa. Los estudiantes se
+                            encuentran con el símbolo \( f(x) \) sin comprender que representa un fenómeno vivo. El
+                            texto cuestiona: <em>¿Se puede describir una función de manera más concisa para que en la
+                                primera experiencia el investigador comprenda su majestad?</em>
                         </p>
                     </div>
                 </div>
-                
+
                 <div class="space-y-6">
                     <div class="glass-card p-8 rounded-2xl relative border-l-4 border-l-purple-500">
                         <h3 class="text-xl font-bold text-white mb-4">Hipótesis Central</h3>
                         <p class="text-slate-300 italic">
-                            "El aprendizaje es más dócil cuando se aborda de forma anecdótica en relación a nuestro entorno natural. El concepto de función está presente en los múltiples acontecimientos naturales de la vida diaria."
+                            "El aprendizaje es más dócil cuando se aborda de forma anecdótica en relación a nuestro
+                            entorno natural. El concepto de función está presente en los múltiples acontecimientos
+                            naturales de la vida diaria."
                         </p>
                     </div>
-                    
+
                     <div class="glass-card p-6 rounded-2xl">
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-sm font-bold text-white">Brecha de Comprensión</span>
@@ -221,17 +309,19 @@
     <section id="teoria" class="py-24 bg-black/20 border-y border-white/5">
         <div class="max-w-6xl mx-auto px-6">
             <div class="mb-16">
-                <span class="text-purple-500 font-bold tracking-widest text-xs uppercase mb-2 block">02 / FORMALIZACIÓN RIGUROSA</span>
+                <span class="text-purple-500 font-bold tracking-widest text-xs uppercase mb-2 block">02 / FORMALIZACIÓN
+                    RIGUROSA</span>
                 <h2 class="text-4xl font-bold text-white tech-font">Fundamentación Matemática</h2>
                 <p class="text-slate-400 mt-4 max-w-2xl">
-                    Para entender el "bello comportamiento", primero debemos definir la estructura estática sobre la cual opera.
+                    Para entender el "bello comportamiento", primero debemos definir la estructura estática sobre la
+                    cual opera.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                 <!-- Theory Content -->
                 <div class="lg:col-span-8 space-y-8">
-                    
+
                     <!-- Definition Card -->
                     <div class="glass-card p-8 rounded-2xl">
                         <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
@@ -239,12 +329,15 @@
                             2.1 Definición Formal (Enfoque Bourbaki)
                         </h3>
                         <p class="text-slate-400 mb-6 text-justify">
-                            Nos alejamos de la intuición mecánica para adoptar la definición conjuntista. Una función no es un proceso en sí mismo, sino un subconjunto de relaciones que cumple unicidad existencial.
+                            Nos alejamos de la intuición mecánica para adoptar la definición conjuntista. Una función no
+                            es un proceso en sí mismo, sino un subconjunto de relaciones que cumple unicidad
+                            existencial.
                         </p>
                         <div class="bg-[#05060a] p-6 rounded-xl border border-white/5 overflow-x-auto">
                             <p class="text-slate-500 text-xs uppercase tracking-wider mb-4 font-mono">DEFINICIÓN 1.1</p>
                             <div class="text-lg text-slate-200">
-                                $$ f \subset A \times B \quad \text{tal que} \quad \forall x \in A, \exists! y \in B : (x, y) \in f $$
+                                $$ f \subset A \times B \quad \text{tal que} \quad \forall x \in A, \exists! y \in B :
+                                (x, y) \in f $$
                             </div>
                         </div>
                     </div>
@@ -255,80 +348,102 @@
                             <span class="w-2 h-2 rounded-full bg-cyan-500"></span>
                             2.2 Análisis del Comportamiento Variacional
                         </h3>
-                        
+
                         <div class="space-y-6">
                             <div>
-                                <p class="text-white font-medium mb-2 border-b border-white/10 pb-2">Proposición 1: Invarianza de la Curvatura</p>
+                                <p class="text-white font-medium mb-2 border-b border-white/10 pb-2">Proposición 1:
+                                    Invarianza de la Curvatura</p>
                                 <p class="text-slate-400 text-sm mt-2">
-                                    Sea \( f: \mathbb{R} \to \mathbb{R} \) definida por \( f(x) = ax^2 + bx + c \) con \( a \neq 0 \). 
+                                    Sea \( f: \mathbb{R} \to \mathbb{R} \) definida por \( f(x) = ax^2 + bx + c \) con
+                                    \( a \neq 0 \).
                                     La naturaleza de su concavidad es independiente de su posición espacial.
                                 </p>
                             </div>
-                            
-                            <div class="bg-[#05060a] p-6 rounded-xl border border-white/5 text-slate-300 text-sm space-y-6">
+
+                            <div
+                                class="bg-[#05060a] p-6 rounded-xl border border-white/5 text-slate-300 text-sm space-y-6">
                                 <div>
                                     <div class="flex items-center gap-2 mb-2">
-                                        <span class="bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded text-xs font-mono">PASO 1</span>
+                                        <span
+                                            class="bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded text-xs font-mono">PASO
+                                            1</span>
                                         <span class="font-bold text-white">Operador Diferencial Lineal</span>
                                     </div>
-                                    <p class="text-slate-400 mb-2">Aplicamos la derivada para estudiar la tasa de cambio instantánea:</p>
+                                    <p class="text-slate-400 mb-2">Aplicamos la derivada para estudiar la tasa de cambio
+                                        instantánea:</p>
                                     $$ f'(x) = \frac{d}{dx}(ax^2 + bx + c) = 2ax + b $$
                                 </div>
-                                
+
                                 <div>
                                     <div class="flex items-center gap-2 mb-2">
-                                        <span class="bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded text-xs font-mono">PASO 2</span>
+                                        <span
+                                            class="bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded text-xs font-mono">PASO
+                                            2</span>
                                         <span class="font-bold text-white">Punto Crítico (El Vértice)</span>
                                     </div>
-                                    <p class="text-slate-400 mb-2">Buscamos donde la pendiente es nula (el punto de inflexión del comportamiento):</p>
+                                    <p class="text-slate-400 mb-2">Buscamos donde la pendiente es nula (el punto de
+                                        inflexión del comportamiento):</p>
                                     $$ 2ax + b = 0 \implies x_v = -\frac{b}{2a} $$
                                 </div>
-                                
+
                                 <div>
                                     <div class="flex items-center gap-2 mb-2">
-                                        <span class="bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded text-xs font-mono">PASO 3</span>
+                                        <span
+                                            class="bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded text-xs font-mono">PASO
+                                            3</span>
                                         <span class="font-bold text-white">Segunda Derivada (La Constante)</span>
                                     </div>
-                                    <p class="text-slate-400 mb-2">La aceleración del cambio es constante. Esto explica la simetría perfecta en la naturaleza.</p>
+                                    <p class="text-slate-400 mb-2">La aceleración del cambio es constante. Esto explica
+                                        la simetría perfecta en la naturaleza.</p>
                                     $$ f''(x) = 2a $$
                                     <div class="mt-2 text-xs text-slate-500">
-                                        Si \( a > 0 \), cóncava hacia arriba (valle). Si \( a < 0 \), cóncava hacia abajo (tiro parabólico).
+                                        Si \( a > 0 \), cóncava hacia arriba (valle). Si \( a < 0 \), cóncava hacia
+                                            abajo (tiro parabólico). </div>
                                     </div>
+                                    <div class="text-right text-purple-500/50 text-xs font-mono tracking-widest">∎
+                                        Q.E.D.</div>
                                 </div>
-                                <div class="text-right text-purple-500/50 text-xs font-mono tracking-widest">∎ Q.E.D.</div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Sidebar Summary -->
-                <div class="lg:col-span-4 space-y-4">
-                    <div class="glass-card p-6 rounded-xl border-l-4 border-l-purple-500">
-                        <h4 class="font-bold text-white mb-2 text-sm uppercase tracking-wide">Continuidad \( C^\infty \)</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed">
-                            La función cuadrática es infinitamente diferenciable. Esto explica por qué las trayectorias naturales (como el agua de una fuente o un planeta) son visualmente suaves y continuas, sin rupturas abruptas.
-                        </p>
-                    </div>
-                    <div class="glass-card p-6 rounded-xl border-l-4 border-l-pink-500">
-                        <h4 class="font-bold text-white mb-2 text-sm uppercase tracking-wide">Universalidad</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed">
-                            La formalización conecta el cuantificador universal \( \forall x \) (para todo x) con la observación empírica: la gravedad actúa sobre <em>toda</em> masa de la misma manera funcional.
-                        </p>
+                    <!-- Sidebar Summary -->
+                    <div class="lg:col-span-4 space-y-4">
+                        <div class="glass-card p-6 rounded-xl border-l-4 border-l-purple-500">
+                            <h4 class="font-bold text-white mb-2 text-sm uppercase tracking-wide">Continuidad \(
+                                C^\infty \)</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                La función cuadrática es infinitamente diferenciable. Esto explica por qué las
+                                trayectorias naturales (como el agua de una fuente o un planeta) son visualmente suaves
+                                y continuas, sin rupturas abruptas.
+                            </p>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl border-l-4 border-l-pink-500">
+                            <h4 class="font-bold text-white mb-2 text-sm uppercase tracking-wide">Universalidad</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                La formalización conecta el cuantificador universal \( \forall x \) (para todo x) con la
+                                observación empírica: la gravedad actúa sobre <em>toda</em> masa de la misma manera
+                                funcional.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Section 3: Interactive Lab -->
     <section id="laboratorio" class="py-24 relative overflow-hidden">
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-900/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-900/10 rounded-full blur-[100px] pointer-events-none">
+        </div>
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center mb-16">
-                <span class="text-cyan-500 font-bold tracking-widest text-xs uppercase mb-2 block">03 / SIMULACIÓN</span>
+                <span class="text-cyan-500 font-bold tracking-widest text-xs uppercase mb-2 block">03 /
+                    SIMULACIÓN</span>
                 <h2 class="text-4xl font-bold text-white tech-font">Laboratorio de Comportamiento</h2>
-                <p class="text-slate-400 mt-4">Manipule los coeficientes del polinomio demostrado anteriormente para observar la deformación del espacio-tiempo.</p>
+                <p class="text-slate-400 mt-4">Manipule los coeficientes del polinomio demostrado anteriormente para
+                    observar la deformación del espacio-tiempo.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -336,40 +451,57 @@
                 <div class="lg:col-span-4">
                     <div class="glass-card p-8 rounded-2xl h-full">
                         <h3 class="text-lg font-bold text-white mb-8 flex items-center gap-2">
-                            <svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                            <svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                                </path>
+                            </svg>
                             Parámetros de Control
                         </h3>
-                        
+
                         <div class="space-y-10">
                             <!-- Slider A -->
                             <div class="group">
                                 <div class="flex justify-between mb-4">
                                     <label class="text-slate-300 text-sm font-medium">Concavidad \( (a) \)</label>
-                                    <span id="valA" class="font-mono text-purple-400 bg-purple-500/10 px-2 py-1 rounded text-xs">1.0</span>
+                                    <span id="valA"
+                                        class="font-mono text-purple-400 bg-purple-500/10 px-2 py-1 rounded text-xs">1.0</span>
                                 </div>
                                 <input type="range" id="sliderA" min="-3" max="3" step="0.1" value="1" class="w-full">
-                                <p class="text-xs text-slate-500 mt-2 group-hover:text-purple-400 transition-colors">Determina el signo de \( f''(x) \).</p>
+                                <p class="text-xs text-slate-500 mt-2 group-hover:text-purple-400 transition-colors">
+                                    Determina el signo de \( f''(x) \).</p>
                             </div>
 
                             <!-- Slider B -->
                             <div class="group">
                                 <div class="flex justify-between mb-4">
                                     <label class="text-slate-300 text-sm font-medium">Término Lineal \( (b) \)</label>
-                                    <span id="valB" class="font-mono text-cyan-400 bg-cyan-500/10 px-2 py-1 rounded text-xs">0.0</span>
+                                    <span id="valB"
+                                        class="font-mono text-cyan-400 bg-cyan-500/10 px-2 py-1 rounded text-xs">0.0</span>
                                 </div>
-                                <input type="range" id="sliderB" min="-5" max="5" step="0.5" value="0" class="w-full" style="accent-color: #06b6d4;">
-                                <style> #sliderB::-webkit-slider-thumb { background: #06b6d4; box-shadow: 0 0 10px rgba(6, 182, 212, 0.8); } </style>
-                                <p class="text-xs text-slate-500 mt-2 group-hover:text-cyan-400 transition-colors">Desplazamiento horizontal del vértice.</p>
+                                <input type="range" id="sliderB" min="-5" max="5" step="0.5" value="0" class="w-full"
+                                    style="accent-color: #06b6d4;">
+                                <style>
+                                    #sliderB::-webkit-slider-thumb {
+                                        background: #06b6d4;
+                                        box-shadow: 0 0 10px rgba(6, 182, 212, 0.8);
+                                    }
+                                </style>
+                                <p class="text-xs text-slate-500 mt-2 group-hover:text-cyan-400 transition-colors">
+                                    Desplazamiento horizontal del vértice.</p>
                             </div>
 
                             <!-- Slider C -->
                             <div class="group">
                                 <div class="flex justify-between mb-4">
                                     <label class="text-slate-300 text-sm font-medium">Término Indep. \( (c) \)</label>
-                                    <span id="valC" class="font-mono text-pink-400 bg-pink-500/10 px-2 py-1 rounded text-xs">0.0</span>
+                                    <span id="valC"
+                                        class="font-mono text-pink-400 bg-pink-500/10 px-2 py-1 rounded text-xs">0.0</span>
                                 </div>
-                                <input type="range" id="sliderC" min="-5" max="5" step="0.5" value="0" class="w-full" style="accent-color: #ec4899;">
-                                <p class="text-xs text-slate-500 mt-2 group-hover:text-pink-400 transition-colors">Traslación vertical en \( \mathbb{R} \).</p>
+                                <input type="range" id="sliderC" min="-5" max="5" step="0.5" value="0" class="w-full"
+                                    style="accent-color: #ec4899;">
+                                <p class="text-xs text-slate-500 mt-2 group-hover:text-pink-400 transition-colors">
+                                    Traslación vertical en \( \mathbb{R} \).</p>
                             </div>
                         </div>
                     </div>
@@ -377,10 +509,14 @@
 
                 <!-- Visualization Panel -->
                 <div class="lg:col-span-8">
-                    <div class="glass-card p-2 rounded-2xl relative h-full flex flex-col justify-center border-purple-500/20">
-                        <div class="absolute top-6 right-6 bg-black/50 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10 text-sm font-mono z-10 text-white shadow-lg">
+                    <div
+                        class="glass-card p-2 rounded-2xl relative h-full flex flex-col justify-center border-purple-500/20">
+                        <div
+                            class="absolute top-6 right-6 bg-black/50 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10 text-sm font-mono z-10 text-white shadow-lg">
                             <span class="text-slate-500">f(x) = </span>
-                            <span id="formula-display" class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">1.0x^2 + 0.0x + 0.0</span>
+                            <span id="formula-display"
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">1.0x^2
+                                + 0.0x + 0.0</span>
                         </div>
                         <div class="chart-container w-full h-[450px]">
                             <canvas id="functionChart"></canvas>
@@ -394,9 +530,10 @@
     <!-- Section 4: History & Context (ENHANCED with Wheat Machine) -->
     <section id="historia" class="py-24 bg-black/40 relative">
         <div class="max-w-6xl mx-auto px-6">
-            <span class="text-slate-500 font-bold tracking-widest text-xs uppercase mb-2 block">04 / CRONOLOGÍA Y PEDAGOGÍA</span>
+            <span class="text-slate-500 font-bold tracking-widest text-xs uppercase mb-2 block">04 / CRONOLOGÍA Y
+                PEDAGOGÍA</span>
             <h2 class="text-4xl font-bold text-white mb-12 tech-font">Evolución de la Abstracción</h2>
-            
+
             <!-- Graph -->
             <div class="glass-card p-8 rounded-2xl border border-white/5 mb-16">
                 <div class="chart-container h-64">
@@ -409,38 +546,53 @@
                 <div class="timeline-line"></div>
 
                 <!-- Item 1: Babylon -->
-                <div class="relative glass-card p-6 rounded-xl border-l-0 hover:border-l-4 hover:border-l-purple-500 transition-all duration-300 group">
-                    <div class="absolute -left-[3.25rem] top-6 w-10 h-10 rounded-full bg-[#0B0C15] border-2 border-purple-500 flex items-center justify-center z-10 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(168,85,247,0.5)]">
+                <div
+                    class="relative glass-card p-6 rounded-xl border-l-0 hover:border-l-4 hover:border-l-purple-500 transition-all duration-300 group">
+                    <div
+                        class="absolute -left-[3.25rem] top-6 w-10 h-10 rounded-full bg-[#0B0C15] border-2 border-purple-500 flex items-center justify-center z-10 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(168,85,247,0.5)]">
                         <span class="text-[10px] font-bold text-white">2000<br>AC</span>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-2 tech-font">La Era Tabular <span class="text-slate-500 text-sm font-normal ml-2">// Babilonia</span></h3>
+                    <h3 class="text-lg font-bold text-white mb-2 tech-font">La Era Tabular <span
+                            class="text-slate-500 text-sm font-normal ml-2">// Babilonia</span></h3>
                     <p class="text-slate-400 text-sm leading-relaxed mb-3">
-                        No existía el concepto de "fórmula". La función se entendía como una <span class="text-purple-400">correspondencia discreta</span> en tablas de arcilla para efemérides astronómicas.
+                        No existía el concepto de "fórmula". La función se entendía como una <span
+                            class="text-purple-400">correspondencia discreta</span> en tablas de arcilla para efemérides
+                        astronómicas.
                     </p>
                 </div>
 
                 <!-- Item 2: Euler -->
-                <div class="relative glass-card p-6 rounded-xl border-l-0 hover:border-l-4 hover:border-l-cyan-500 transition-all duration-300 group">
-                    <div class="absolute -left-[3.25rem] top-6 w-10 h-10 rounded-full bg-[#0B0C15] border-2 border-cyan-500 flex items-center justify-center z-10 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(6,182,212,0.5)]">
+                <div
+                    class="relative glass-card p-6 rounded-xl border-l-0 hover:border-l-4 hover:border-l-cyan-500 transition-all duration-300 group">
+                    <div
+                        class="absolute -left-[3.25rem] top-6 w-10 h-10 rounded-full bg-[#0B0C15] border-2 border-cyan-500 flex items-center justify-center z-10 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(6,182,212,0.5)]">
                         <span class="text-[10px] font-bold text-white">1748</span>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-2 tech-font">La Expresión Analítica <span class="text-slate-500 text-sm font-normal ml-2">// Euler</span></h3>
+                    <h3 class="text-lg font-bold text-white mb-2 tech-font">La Expresión Analítica <span
+                            class="text-slate-500 text-sm font-normal ml-2">// Euler</span></h3>
                     <p class="text-slate-400 text-sm leading-relaxed mb-3">
-                        En su obra <em>Introductio in analysin infinitorum</em>, Euler define la función como una <span class="text-cyan-400">expresión analítica</span> compuesta de variables y constantes. Nace la notación \( f(x) \).
+                        En su obra <em>Introductio in analysin infinitorum</em>, Euler define la función como una <span
+                            class="text-cyan-400">expresión analítica</span> compuesta de variables y constantes. Nace
+                        la notación \( f(x) \).
                     </p>
                 </div>
 
                 <!-- Item 3: Dirichlet -->
-                <div class="relative glass-card p-6 rounded-xl border-l-0 hover:border-l-4 hover:border-l-pink-500 transition-all duration-300 group">
-                    <div class="absolute -left-[3.25rem] top-6 w-10 h-10 rounded-full bg-[#0B0C15] border-2 border-pink-500 flex items-center justify-center z-10 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(236,72,153,0.5)]">
+                <div
+                    class="relative glass-card p-6 rounded-xl border-l-0 hover:border-l-4 hover:border-l-pink-500 transition-all duration-300 group">
+                    <div
+                        class="absolute -left-[3.25rem] top-6 w-10 h-10 rounded-full bg-[#0B0C15] border-2 border-pink-500 flex items-center justify-center z-10 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(236,72,153,0.5)]">
                         <span class="text-[10px] font-bold text-white">1837</span>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-2 tech-font">La Correspondencia Arbitraria <span class="text-slate-500 text-sm font-normal ml-2">// Dirichlet</span></h3>
+                    <h3 class="text-lg font-bold text-white mb-2 tech-font">La Correspondencia Arbitraria <span
+                            class="text-slate-500 text-sm font-normal ml-2">// Dirichlet</span></h3>
                     <p class="text-slate-400 text-sm leading-relaxed mb-3">
-                        Rompe con la necesidad de una fórmula. Una función es cualquier regla que asigne un valor único. Introduce funciones "patológicas" (como la función característica de los racionales).
+                        Rompe con la necesidad de una fórmula. Una función es cualquier regla que asigne un valor único.
+                        Introduce funciones "patológicas" (como la función característica de los racionales).
                     </p>
                     <div class="bg-black/30 p-3 rounded border border-white/5 font-mono text-xs text-slate-300">
-                        \( y \) es función de \( x \) si a cada valor de \( x \) corresponde un valor definido de \( y \), sin importar cómo.
+                        \( y \) es función de \( x \) si a cada valor de \( x \) corresponde un valor definido de \( y
+                        \), sin importar cómo.
                     </div>
                 </div>
             </div>
@@ -448,10 +600,12 @@
             <!-- NEW SECTION: The Wheat Machine Analogy -->
             <div class="mt-24 border-t border-white/10 pt-16">
                 <div class="text-center mb-12">
-                    <span class="text-yellow-500 font-bold tracking-widest text-xs uppercase mb-2 block">ANALOGÍA CONCEPTUAL</span>
+                    <span class="text-yellow-500 font-bold tracking-widest text-xs uppercase mb-2 block">ANALOGÍA
+                        CONCEPTUAL</span>
                     <h2 class="text-3xl font-bold text-white tech-font">La Metáfora de la Máquina</h2>
                     <p class="text-slate-400 mt-4 max-w-2xl mx-auto">
-                        Para entender la "correspondencia" de Dirichlet en términos físicos, recurrimos a la analogía de la máquina de moler trigo. 
+                        Para entender la "correspondencia" de Dirichlet en términos físicos, recurrimos a la analogía de
+                        la máquina de moler trigo.
                         La función no es el trigo ni la harina; <strong>es el proceso de transformación</strong>.
                     </p>
                 </div>
@@ -459,37 +613,48 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-4xl mx-auto">
                     <!-- Step 1: Input -->
                     <div class="text-center group">
-                        <div class="w-24 h-24 mx-auto bg-black/40 rounded-full border border-yellow-500/30 flex items-center justify-center mb-4 relative overflow-hidden group-hover:border-yellow-500 transition-colors">
+                        <div
+                            class="w-24 h-24 mx-auto bg-black/40 rounded-full border border-yellow-500/30 flex items-center justify-center mb-4 relative overflow-hidden group-hover:border-yellow-500 transition-colors">
                             <span class="text-yellow-500 font-bold text-xl">x</span>
                             <!-- Animated Grain -->
-                            <div class="absolute w-2 h-2 bg-yellow-400 rounded-full top-2 opacity-0 group-hover:opacity-100 group-hover:animate-bounce"></div>
+                            <div
+                                class="absolute w-2 h-2 bg-yellow-400 rounded-full top-2 opacity-0 group-hover:opacity-100 group-hover:animate-bounce">
+                            </div>
                         </div>
                         <h4 class="text-white font-bold">Dominio (Entrada)</h4>
                         <p class="text-sm text-slate-500 mt-2">Granos de Trigo</p>
                     </div>
 
                     <!-- Step 2: Process (The Machine) -->
-                    <div class="relative glass-card p-8 rounded-xl text-center border-yellow-500/20 shadow-[0_0_30px_rgba(234,179,8,0.1)]">
+                    <div
+                        class="relative glass-card p-8 rounded-xl text-center border-yellow-500/20 shadow-[0_0_30px_rgba(234,179,8,0.1)]">
                         <!-- Arrow -->
                         <div class="absolute -left-4 top-1/2 transform -translate-y-1/2 text-slate-600">➝</div>
                         <div class="absolute -right-4 top-1/2 transform -translate-y-1/2 text-slate-600">➝</div>
-                        
+
                         <div class="mb-4">
-                            <svg class="w-16 h-16 mx-auto text-yellow-500 animate-[spin_10s_linear_infinite]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <svg class="w-16 h-16 mx-auto text-yellow-500 animate-[spin_10s_linear_infinite]"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
                         </div>
                         <h3 class="text-2xl font-bold text-white mb-1">f(x)</h3>
-                        <p class="text-xs text-yellow-500 font-mono uppercase tracking-widest">Máquina de Transformación</p>
+                        <p class="text-xs text-yellow-500 font-mono uppercase tracking-widest">Máquina de Transformación
+                        </p>
                     </div>
 
                     <!-- Step 3: Output -->
                     <div class="text-center group">
-                        <div class="w-24 h-24 mx-auto bg-black/40 rounded-full border border-white/10 flex items-center justify-center mb-4 relative overflow-hidden group-hover:border-white/50 transition-colors">
+                        <div
+                            class="w-24 h-24 mx-auto bg-black/40 rounded-full border border-white/10 flex items-center justify-center mb-4 relative overflow-hidden group-hover:border-white/50 transition-colors">
                             <span class="text-white font-bold text-xl">y</span>
                             <!-- Flour Pile -->
-                            <div class="absolute bottom-0 w-full bg-white/20 h-0 group-hover:h-8 transition-all duration-700 rounded-t-lg"></div>
+                            <div
+                                class="absolute bottom-0 w-full bg-white/20 h-0 group-hover:h-8 transition-all duration-700 rounded-t-lg">
+                            </div>
                         </div>
                         <h4 class="text-white font-bold">Rango (Salida)</h4>
                         <p class="text-sm text-slate-500 mt-2">Harina Refinada</p>
@@ -502,16 +667,19 @@
     <!-- Section 5: Applications (Restored Detail) -->
     <section class="py-24">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-white mb-16 text-center tech-font">Convergencia Real: La Función en la Naturaleza</h2>
+            <h2 class="text-4xl font-bold text-white mb-16 text-center tech-font">Convergencia Real: La Función en la
+                Naturaleza</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Card 1 -->
                 <div class="glass-card p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
-                    <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors">
                         <span class="text-blue-400 text-2xl font-bold">∆</span>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Cinemática y Balística</h3>
                     <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                        El movimiento de un proyectil no "decide" moverse; obedece ciegamente a una función cuadrática. La posición \( y(t) \) es consecuencia inevitable de la gravedad constante \( g \).
+                        El movimiento de un proyectil no "decide" moverse; obedece ciegamente a una función cuadrática.
+                        La posición \( y(t) \) es consecuencia inevitable de la gravedad constante \( g \).
                     </p>
                     <div class="text-xs font-mono text-blue-500 bg-blue-500/5 p-2 rounded">
                         y(t) = -½gt² + v₀t + y₀
@@ -520,12 +688,14 @@
 
                 <!-- Card 2 -->
                 <div class="glass-card p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
-                    <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-colors">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-colors">
                         <span class="text-purple-400 text-2xl font-bold">∑</span>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Ingeniería Estructural</h3>
                     <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                        En un puente colgante, el cable principal adopta una forma parabólica perfecta bajo carga uniforme distribuida horizontalmente, minimizando la tensión estructural.
+                        En un puente colgante, el cable principal adopta una forma parabólica perfecta bajo carga
+                        uniforme distribuida horizontalmente, minimizando la tensión estructural.
                     </p>
                     <div class="text-xs font-mono text-purple-500 bg-purple-500/5 p-2 rounded">
                         Tensión = f(carga, geometría)
@@ -534,12 +704,14 @@
 
                 <!-- Card 3 -->
                 <div class="glass-card p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
-                    <div class="w-12 h-12 rounded-lg bg-pink-500/10 flex items-center justify-center mb-6 group-hover:bg-pink-500/20 transition-colors">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-pink-500/10 flex items-center justify-center mb-6 group-hover:bg-pink-500/20 transition-colors">
                         <span class="text-pink-400 text-2xl font-bold">∫</span>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Economía Marginal</h3>
                     <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                        La utilidad marginal es la derivada de la función de utilidad total. El punto de máxima ganancia ocurre cuando la derivada del costo iguala a la derivada del ingreso.
+                        La utilidad marginal es la derivada de la función de utilidad total. El punto de máxima ganancia
+                        ocurre cuando la derivada del costo iguala a la derivada del ingreso.
                     </p>
                     <div class="text-xs font-mono text-pink-500 bg-pink-500/5 p-2 rounded">
                         Img(x) = Cmg(x)
@@ -664,7 +836,7 @@
                     responsive: true,
                     maintainAspectRatio: false,
                     scales: {
-                        x: { type: 'linear', min: -2000, max: 2000, ticks: { callback: v => v < 0 ? Math.abs(v)+' AC' : v } },
+                        x: { type: 'linear', min: -2000, max: 2000, ticks: { callback: v => v < 0 ? Math.abs(v) + ' AC' : v } },
                         y: { display: false }
                     },
                     plugins: { legend: { display: false }, tooltip: { callbacks: { label: (ctx) => historyData[ctx.dataIndex].label } } }
@@ -675,4 +847,5 @@
         document.addEventListener('DOMContentLoaded', () => { initFunctionChart(); initHistoryChart(); });
     </script>
 </body>
+
 </html>
