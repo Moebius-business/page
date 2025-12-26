@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,9 @@
     <!-- Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
     <!-- Iconos (Phosphor Icons para un look moderno) -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
@@ -21,7 +24,7 @@
             --neon-green: #00ff9d;
             --dark-bg: #050505;
         }
-        
+
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
@@ -30,7 +33,11 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, .brand, .font-tech {
+        h1,
+        h2,
+        h3,
+        .brand,
+        .font-tech {
             font-family: 'Orbitron', sans-serif;
         }
 
@@ -53,7 +60,7 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
         }
-        
+
         .glass-nav {
             background: rgba(5, 5, 5, 0.85);
             backdrop-filter: blur(20px);
@@ -61,9 +68,20 @@
         }
 
         /* Neon Text & Effects */
-        .text-neon-blue { color: var(--neon-blue); text-shadow: 0 0 15px rgba(0, 243, 255, 0.4); }
-        .text-neon-purple { color: var(--neon-purple); text-shadow: 0 0 15px rgba(189, 0, 255, 0.4); }
-        .text-neon-green { color: var(--neon-green); text-shadow: 0 0 15px rgba(0, 255, 157, 0.4); }
+        .text-neon-blue {
+            color: var(--neon-blue);
+            text-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+        }
+
+        .text-neon-purple {
+            color: var(--neon-purple);
+            text-shadow: 0 0 15px rgba(189, 0, 255, 0.4);
+        }
+
+        .text-neon-green {
+            color: var(--neon-green);
+            text-shadow: 0 0 15px rgba(0, 255, 157, 0.4);
+        }
 
         .btn-neon {
             position: relative;
@@ -85,7 +103,7 @@
         .card-hover {
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        
+
         .card-hover:hover {
             transform: translateY(-10px);
             border-color: var(--neon-blue);
@@ -113,13 +131,15 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
             transform: translateX(-100%);
             animation: shimmer 2s infinite;
         }
 
         @keyframes shimmer {
-            100% { transform: translateX(100%); }
+            100% {
+                transform: translateX(100%);
+            }
         }
 
         /* Cursor */
@@ -138,9 +158,11 @@
         }
 
         @media (min-width: 768px) {
-            .custom-cursor { display: block; }
+            .custom-cursor {
+                display: block;
+            }
         }
-        
+
         .cursor-active {
             transform: translate(-50%, -50%) scale(1.8);
             background: rgba(0, 243, 255, 0.2);
@@ -153,7 +175,7 @@
             display: inline-block;
             margin-bottom: 3rem;
         }
-        
+
         .section-title::after {
             content: '';
             position: absolute;
@@ -165,12 +187,25 @@
             box-shadow: 0 0 10px var(--neon-purple);
         }
 
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #000; }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--neon-blue); }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--neon-blue);
+        }
     </style>
 </head>
+
 <body>
 
     <div id="cursor" class="custom-cursor"></div>
@@ -185,12 +220,18 @@
                 </div>
                 <div class="hidden lg:block">
                     <div class="ml-10 flex items-baseline space-x-6">
-                        <a href="#home" class="hover:text-neon-blue px-2 py-2 text-sm font-medium transition-colors uppercase tracking-wider">Home</a>
-                        <a href="#about" class="hover:text-neon-blue px-2 py-2 text-sm font-medium transition-colors uppercase tracking-wider">Visión</a>
-                        <a href="#work" class="hover:text-neon-blue px-2 py-2 text-sm font-medium transition-colors uppercase tracking-wider">Trabajo</a>
-                        <a href="#services" class="hover:text-neon-blue px-2 py-2 text-sm font-medium transition-colors uppercase tracking-wider">Servicios</a>
-                        <a href="#education" class="hover:text-neon-blue px-2 py-2 text-sm font-medium transition-colors uppercase tracking-wider">Educación</a>
-                        <a href="#team" class="hover:text-neon-blue px-2 py-2 text-sm font-medium transition-colors uppercase tracking-wider">Equipo</a>
+                        <a href="#home"
+                            class="hover:text-neon-blue px-2 py-2 text-sm font-medium transition-colors uppercase tracking-wider">Home</a>
+                        <a href="#about"
+                            class="hover:text-neon-blue px-2 py-2 text-sm font-medium transition-colors uppercase tracking-wider">Visión</a>
+                        <a href="#work"
+                            class="hover:text-neon-blue px-2 py-2 text-sm font-medium transition-colors uppercase tracking-wider">Trabajo</a>
+                        <a href="#services"
+                            class="hover:text-neon-blue px-2 py-2 text-sm font-medium transition-colors uppercase tracking-wider">Servicios</a>
+                        <a href="#education"
+                            class="hover:text-neon-blue px-2 py-2 text-sm font-medium transition-colors uppercase tracking-wider">Educación</a>
+                        <a href="#team"
+                            class="hover:text-neon-blue px-2 py-2 text-sm font-medium transition-colors uppercase tracking-wider">Equipo</a>
                         <a href="#contact" class="btn-neon px-5 py-2 rounded-full text-xs font-bold ml-4">Contacto</a>
                     </div>
                 </div>
@@ -209,17 +250,20 @@
                 <span class="text-neon-blue tracking-widest text-xs font-bold uppercase">Startup para la ciencia</span>
             </div>
             <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight text-white">
-                Innovación <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple">Científica</span><br>
+                Innovación <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple">Científica</span><br>
                 Digital
             </h1>
             <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-                Difundimos conocimientos en ciencia de datos, matemática, física e inteligencia artificial para promover el desarrollo tecnológico.
+                Difundimos conocimientos en ciencia de datos, matemática, física e inteligencia artificial para promover
+                el desarrollo tecnológico.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-6">
                 <a href="#services" class="btn-neon px-8 py-4 rounded text-sm font-bold tracking-wider uppercase">
                     Nuestros Servicios
                 </a>
-                <a href="#work" class="glass hover:bg-white/10 text-white px-8 py-4 rounded text-sm font-bold tracking-wider uppercase transition-all border border-white/20 flex items-center justify-center gap-2">
+                <a href="#work"
+                    class="glass hover:bg-white/10 text-white px-8 py-4 rounded text-sm font-bold tracking-wider uppercase transition-all border border-white/20 flex items-center justify-center gap-2">
                     Ver Trabajo <i class="ph ph-arrow-right"></i>
                 </a>
             </div>
@@ -232,12 +276,16 @@
             <div class="glass rounded-3xl p-8 md:p-16 border-l-4 border-l-neon-purple">
                 <div class="flex flex-col md:flex-row gap-12 items-center">
                     <div class="w-full md:w-1/2">
-                        <h2 class="section-title text-3xl md:text-4xl font-bold mb-6">Nuestra <span class="text-neon-purple">Visión</span></h2>
+                        <h2 class="section-title text-3xl md:text-4xl font-bold mb-6">Nuestra <span
+                                class="text-neon-purple">Visión</span></h2>
                         <p class="text-gray-300 leading-relaxed text-lg mb-6">
-                            Nuestra visión empresarial es difundir conocimientos en <span class="text-neon-blue">ciencia de datos, matemática, física, estadística y programación</span> en el Perú para promover la innovación y el desarrollo en el país.
+                            Nuestra visión empresarial es difundir conocimientos en <span class="text-neon-blue">ciencia
+                                de datos, matemática, física, estadística y programación</span> en el Perú para promover
+                            la innovación y el desarrollo en el país.
                         </p>
                         <p class="text-gray-400 leading-relaxed">
-                            Queremos inspirar a otros a adquirir habilidades y conocimientos para tener un impacto positivo en la sociedad y ayudar a construir un futuro mejor.
+                            Queremos inspirar a otros a adquirir habilidades y conocimientos para tener un impacto
+                            positivo en la sociedad y ayudar a construir un futuro mejor.
                         </p>
                         <div class="mt-8 flex items-center gap-4">
                             <div class="text-2xl font-tech text-white">Moebius</div>
@@ -269,17 +317,47 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4"><span class="text-neon-blue">Nuestro</span> Trabajo</h2>
                 <p class="text-gray-400 max-w-3xl mx-auto">
-                    Somos jóvenes de la facultad de ciencias físico-matemáticas. Hemos dedicado años a adquirir conocimientos avanzados y habilidades técnicas para construir una plataforma accesible.
+                    Explora nuestros proyectos y publicaciones recientes.
                 </p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- === NUEVA TARJETA: ARTÍCULO CIENTÍFICO === -->
+                <!-- Esta tarjeta es un enlace <a> que abre peter.html en una nueva pestaña -->
+                <a href="peter.html" target="_blank"
+                    class="glass p-6 rounded-xl card-hover group relative overflow-hidden block border border-neon-green/30">
+                    <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
+                        <!-- Icono de Pergamino/Artículo -->
+                        <i class="ph ph-scroll text-6xl text-neon-green"></i>
+                    </div>
+                    <!-- Etiqueta de Novedad -->
+                    <div
+                        class="absolute top-4 right-4 bg-neon-green/90 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider animate-pulse shadow-[0_0_10px_rgba(0,255,157,0.5)]">
+                        Novedad
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-2 mt-8 relative z-10 text-white flex items-center gap-2">
+                        Artículo Científico
+                        <i class="ph ph-arrow-square-out text-sm text-gray-400"></i>
+                    </h3>
+                    <div class="h-1 w-10 bg-neon-green mb-4"></div>
+                    <p class="text-gray-400 text-sm relative z-10 leading-relaxed">
+                        "El lado desconocido de una función". Visualización interactiva y análisis riguroso de funciones
+                        matemáticas y su comportamiento.
+                    </p>
+                    <div
+                        class="mt-4 text-xs text-neon-green font-bold uppercase tracking-wider flex items-center gap-1 group-hover:translate-x-2 transition-transform">
+                        Leer Ahora <i class="ph ph-caret-right"></i>
+                    </div>
+                </a>
+                <!-- ============================================ -->
+
                 <!-- Card Work 1 -->
                 <div class="glass p-6 rounded-xl card-hover group relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
                         <i class="ph ph-paint-brush-broad text-6xl text-neon-purple"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 mt-8 relative z-10">Diseño Gráfico</h3>
+                    <h3 class="text-xl font-bold mb-2 mt-8 relative z-10 text-white">Diseño Gráfico</h3>
                     <div class="h-1 w-10 bg-neon-purple mb-4"></div>
                     <p class="text-gray-400 text-sm relative z-10">Comunicación visual científica de alto impacto.</p>
                 </div>
@@ -288,7 +366,7 @@
                     <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
                         <i class="ph ph-code text-6xl text-neon-blue"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 mt-8 relative z-10">Python</h3>
+                    <h3 class="text-xl font-bold mb-2 mt-8 relative z-10 text-white">Python</h3>
                     <div class="h-1 w-10 bg-neon-blue mb-4"></div>
                     <p class="text-gray-400 text-sm relative z-10">Desarrollo de scripts para análisis de datos.</p>
                 </div>
@@ -297,16 +375,16 @@
                     <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
                         <i class="ph ph-function text-6xl text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 mt-8 relative z-10">LaTeX</h3>
+                    <h3 class="text-xl font-bold mb-2 mt-8 relative z-10 text-white">LaTeX</h3>
                     <div class="h-1 w-10 bg-white mb-4"></div>
                     <p class="text-gray-400 text-sm relative z-10">Redacción académica y científica profesional.</p>
                 </div>
-                 <!-- Card Work 4 -->
-                 <div class="glass p-6 rounded-xl card-hover group relative overflow-hidden">
+                <!-- Card Work 4 -->
+                <div class="glass p-6 rounded-xl card-hover group relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
                         <i class="ph ph-pi text-6xl text-neon-green"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 mt-8 relative z-10">Matemáticas</h3>
+                    <h3 class="text-xl font-bold mb-2 mt-8 relative z-10 text-white">Matemáticas</h3>
                     <div class="h-1 w-10 bg-neon-green mb-4"></div>
                     <p class="text-gray-400 text-sm relative z-10">Modelado y resolución de problemas complejos.</p>
                 </div>
@@ -315,18 +393,9 @@
                     <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
                         <i class="ph ph-atom text-6xl text-orange-500"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 mt-8 relative z-10">Física</h3>
+                    <h3 class="text-xl font-bold mb-2 mt-8 relative z-10 text-white">Física</h3>
                     <div class="h-1 w-10 bg-orange-500 mb-4"></div>
                     <p class="text-gray-400 text-sm relative z-10">Simulaciones y análisis de fenómenos físicos.</p>
-                </div>
-                <!-- Card Work 6 -->
-                <div class="glass p-6 rounded-xl card-hover group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
-                        <i class="ph ph-chart-bar text-6xl text-blue-500"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 mt-8 relative z-10">Lenguaje R</h3>
-                    <div class="h-1 w-10 bg-blue-500 mb-4"></div>
-                    <p class="text-gray-400 text-sm relative z-10">Estadística avanzada y ciencia de datos.</p>
                 </div>
             </div>
         </div>
@@ -337,56 +406,67 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex flex-col md:flex-row gap-16">
                 <div class="md:w-1/3">
-                    <h2 class="section-title text-3xl md:text-4xl font-bold mb-6">Servicios <span class="text-neon-purple">Premium</span></h2>
+                    <h2 class="section-title text-3xl md:text-4xl font-bold mb-6">Servicios <span
+                            class="text-neon-purple">Premium</span></h2>
                     <p class="text-gray-400 mb-6 leading-relaxed">
-                        Ofrecemos servicios de asesoría en ciencias para jóvenes que deseen desarrollar habilidades técnicas avanzadas. Trabajaremos contigo de manera personalizada.
+                        Ofrecemos servicios de asesoría en ciencias para jóvenes que deseen desarrollar habilidades
+                        técnicas avanzadas. Trabajaremos contigo de manera personalizada.
                     </p>
                     <div class="p-6 glass rounded-xl border border-neon-blue/30">
                         <h4 class="font-bold text-white mb-2">¿Por qué nosotros?</h4>
                         <ul class="text-sm text-gray-400 space-y-2">
-                            <li class="flex items-center"><i class="ph ph-check text-neon-green mr-2"></i> Expertos en ciencias</li>
-                            <li class="flex items-center"><i class="ph ph-check text-neon-green mr-2"></i> Enfoque personalizado</li>
-                            <li class="flex items-center"><i class="ph ph-check text-neon-green mr-2"></i> Tecnología de punta</li>
+                            <li class="flex items-center"><i class="ph ph-check text-neon-green mr-2"></i> Expertos en
+                                ciencias</li>
+                            <li class="flex items-center"><i class="ph ph-check text-neon-green mr-2"></i> Enfoque
+                                personalizado</li>
+                            <li class="flex items-center"><i class="ph ph-check text-neon-green mr-2"></i> Tecnología de
+                                punta</li>
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Service Item -->
                     <div class="glass p-6 rounded-lg hover:bg-white/5 transition-colors">
                         <i class="ph ph-chalkboard-teacher text-4xl text-neon-blue mb-4"></i>
                         <h3 class="text-xl font-bold text-white mb-2">Asesoría Académica</h3>
-                        <p class="text-gray-400 text-sm">Servicios de alta calidad en áreas de física, matemáticas y estadística para maximizar tu potencial.</p>
+                        <p class="text-gray-400 text-sm">Servicios de alta calidad en áreas de física, matemáticas y
+                            estadística para maximizar tu potencial.</p>
                     </div>
                     <!-- Service Item -->
                     <div class="glass p-6 rounded-lg hover:bg-white/5 transition-colors">
                         <i class="ph ph-student text-4xl text-neon-purple mb-4"></i>
                         <h3 class="text-xl font-bold text-white mb-2">Clases Personalizadas</h3>
-                        <p class="text-gray-400 text-sm">Adaptadas a tus necesidades y ritmo. Nuestro equipo te ayuda a desarrollar habilidades sólidas.</p>
+                        <p class="text-gray-400 text-sm">Adaptadas a tus necesidades y ritmo. Nuestro equipo te ayuda a
+                            desarrollar habilidades sólidas.</p>
                     </div>
                     <!-- Service Item -->
                     <div class="glass p-6 rounded-lg hover:bg-white/5 transition-colors">
                         <i class="ph ph-file-text text-4xl text-neon-green mb-4"></i>
                         <h3 class="text-xl font-bold text-white mb-2">Resolución de Trabajos</h3>
-                        <p class="text-gray-400 text-sm">Ayuda experta para resolver tareas y exámenes complejos en tiempo récord con alta precisión.</p>
+                        <p class="text-gray-400 text-sm">Ayuda experta para resolver tareas y exámenes complejos en
+                            tiempo récord con alta precisión.</p>
                     </div>
                     <!-- Service Item -->
                     <div class="glass p-6 rounded-lg hover:bg-white/5 transition-colors">
                         <i class="ph ph-terminal-window text-4xl text-white mb-4"></i>
                         <h3 class="text-xl font-bold text-white mb-2">Programación</h3>
-                        <p class="text-gray-400 text-sm">Python, MATLAB, R y LaTeX para ciencia, ingeniería y negocios.</p>
+                        <p class="text-gray-400 text-sm">Python, MATLAB, R y LaTeX para ciencia, ingeniería y negocios.
+                        </p>
                     </div>
                     <!-- Service Item -->
                     <div class="glass p-6 rounded-lg hover:bg-white/5 transition-colors">
                         <i class="ph ph-pencil-circle text-4xl text-orange-400 mb-4"></i>
                         <h3 class="text-xl font-bold text-white mb-2">Diseño Gráfico</h3>
-                        <p class="text-gray-400 text-sm">Diseños únicos usando CorelDRAW, Inkscape, Photoshop e Illustrator.</p>
+                        <p class="text-gray-400 text-sm">Diseños únicos usando CorelDRAW, Inkscape, Photoshop e
+                            Illustrator.</p>
                     </div>
                     <!-- Service Item -->
                     <div class="glass p-6 rounded-lg hover:bg-white/5 transition-colors">
                         <i class="ph ph-flask text-4xl text-pink-500 mb-4"></i>
                         <h3 class="text-xl font-bold text-white mb-2">Investigación</h3>
-                        <p class="text-gray-400 text-sm">Constante actualización científica para brindar soluciones efectivas basadas en investigación.</p>
+                        <p class="text-gray-400 text-sm">Constante actualización científica para brindar soluciones
+                            efectivas basadas en investigación.</p>
                     </div>
                 </div>
             </div>
@@ -399,20 +479,24 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <!-- Misión -->
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Nuestra <span class="text-neon-blue">Misión</span></h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Nuestra <span
+                            class="text-neon-blue">Misión</span></h2>
                     <div class="glass p-8 rounded-2xl border-t border-neon-blue">
                         <p class="text-gray-300 mb-6 leading-relaxed">
-                            Promover y fomentar el uso y aplicación de la ciencia en todas sus formas. Buscamos brindar información precisa, actualizada y de calidad.
+                            Promover y fomentar el uso y aplicación de la ciencia en todas sus formas. Buscamos brindar
+                            información precisa, actualizada y de calidad.
                         </p>
                         <p class="text-gray-300 leading-relaxed">
-                            Creemos que el conocimiento científico puede ser utilizado para mejorar la calidad de vida de las personas y contribuir al desarrollo sostenible del mundo.
+                            Creemos que el conocimiento científico puede ser utilizado para mejorar la calidad de vida
+                            de las personas y contribuir al desarrollo sostenible del mundo.
                         </p>
                     </div>
                 </div>
 
                 <!-- Habilidades -->
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white">Habilidades <span class="text-neon-green">Técnicas</span></h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white">Habilidades <span
+                            class="text-neon-green">Técnicas</span></h2>
                     <div class="space-y-6">
                         <!-- Skill 1 -->
                         <div>
@@ -474,7 +558,8 @@
     <section id="education" class="py-24 relative z-10">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Educación & <span class="text-neon-purple">Software</span></h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Educación & <span
+                        class="text-neon-purple">Software</span></h2>
                 <p class="text-gray-400 max-w-2xl mx-auto">
                     Nos dedicamos a utilizar softwares científicos de vanguardia.
                 </p>
@@ -483,34 +568,48 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Education Item -->
                 <div class="glass p-8 rounded-2xl text-center card-hover border-t-2 border-white">
-                    <div class="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 text-white font-bold text-2xl">Tx</div>
+                    <div
+                        class="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 text-white font-bold text-2xl">
+                        Tx</div>
                     <h3 class="text-xl font-bold text-white">LaTeX</h3>
                     <span class="text-xs uppercase tracking-widest text-gray-500 mb-4 block">Redacción</span>
-                    <p class="text-gray-400 text-sm">Documentos profesionales de alta calidad, textos científicos y fórmulas matemáticas con precisión.</p>
+                    <p class="text-gray-400 text-sm">Documentos profesionales de alta calidad, textos científicos y
+                        fórmulas matemáticas con precisión.</p>
                 </div>
 
                 <!-- Education Item -->
                 <div class="glass p-8 rounded-2xl text-center card-hover border-t-2 border-neon-blue">
-                    <div class="w-16 h-16 mx-auto bg-neon-blue/10 rounded-full flex items-center justify-center mb-4 text-neon-blue text-3xl"><i class="ph ph-snake"></i></div>
+                    <div
+                        class="w-16 h-16 mx-auto bg-neon-blue/10 rounded-full flex items-center justify-center mb-4 text-neon-blue text-3xl">
+                        <i class="ph ph-snake"></i>
+                    </div>
                     <h3 class="text-xl font-bold text-white">Python</h3>
                     <span class="text-xs uppercase tracking-widest text-gray-500 mb-4 block">Ciencia de Datos</span>
-                    <p class="text-gray-400 text-sm">Análisis de datos, aprendizaje profundo con Tensorflow y Keras, y visión por computador.</p>
+                    <p class="text-gray-400 text-sm">Análisis de datos, aprendizaje profundo con Tensorflow y Keras, y
+                        visión por computador.</p>
                 </div>
 
                 <!-- Education Item -->
                 <div class="glass p-8 rounded-2xl text-center card-hover border-t-2 border-blue-500">
-                    <div class="w-16 h-16 mx-auto bg-blue-500/10 rounded-full flex items-center justify-center mb-4 text-blue-500 font-bold text-2xl">R</div>
+                    <div
+                        class="w-16 h-16 mx-auto bg-blue-500/10 rounded-full flex items-center justify-center mb-4 text-blue-500 font-bold text-2xl">
+                        R</div>
                     <h3 class="text-xl font-bold text-white">R Stats</h3>
                     <span class="text-xs uppercase tracking-widest text-gray-500 mb-4 block">Estadística</span>
-                    <p class="text-gray-400 text-sm">Análisis estadístico robusto, modelado de datos y visualización de resultados complejos.</p>
+                    <p class="text-gray-400 text-sm">Análisis estadístico robusto, modelado de datos y visualización de
+                        resultados complejos.</p>
                 </div>
 
                 <!-- Education Item -->
                 <div class="glass p-8 rounded-2xl text-center card-hover border-t-2 border-orange-500">
-                    <div class="w-16 h-16 mx-auto bg-orange-500/10 rounded-full flex items-center justify-center mb-4 text-orange-500 text-3xl"><i class="ph ph-grid-four"></i></div>
+                    <div
+                        class="w-16 h-16 mx-auto bg-orange-500/10 rounded-full flex items-center justify-center mb-4 text-orange-500 text-3xl">
+                        <i class="ph ph-grid-four"></i>
+                    </div>
                     <h3 class="text-xl font-bold text-white">MATLAB</h3>
                     <span class="text-xs uppercase tracking-widest text-gray-500 mb-4 block">Ingeniería</span>
-                    <p class="text-gray-400 text-sm">Cálculos matemáticos, álgebra lineal, simulación y aplicaciones científicas eficientes.</p>
+                    <p class="text-gray-400 text-sm">Cálculos matemáticos, álgebra lineal, simulación y aplicaciones
+                        científicas eficientes.</p>
                 </div>
             </div>
         </div>
@@ -519,11 +618,14 @@
     <!-- Equipo (Antes Blog) -->
     <section id="team" class="py-24 relative z-10 bg-black/50">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="section-title text-3xl md:text-4xl font-bold mb-12">Nuestro <span class="text-neon-blue">Equipo</span></h2>
+            <h2 class="section-title text-3xl md:text-4xl font-bold mb-12">Nuestro <span
+                    class="text-neon-blue">Equipo</span></h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Member 1 -->
                 <div class="glass p-6 rounded-xl flex items-center space-x-4 card-hover">
-                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-neon-blue to-blue-900 flex items-center justify-center text-white text-xl font-bold">CF</div>
+                    <div
+                        class="w-16 h-16 rounded-full bg-gradient-to-br from-neon-blue to-blue-900 flex items-center justify-center text-white text-xl font-bold">
+                        CF</div>
                     <div>
                         <h3 class="text-lg font-bold text-white">Christian Flores</h3>
                         <p class="text-neon-blue text-xs uppercase">Co-Fundador</p>
@@ -531,7 +633,9 @@
                 </div>
                 <!-- Member 2 -->
                 <div class="glass p-6 rounded-xl flex items-center space-x-4 card-hover">
-                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-purple-900 flex items-center justify-center text-white text-xl font-bold">AM</div>
+                    <div
+                        class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-purple-900 flex items-center justify-center text-white text-xl font-bold">
+                        AM</div>
                     <div>
                         <h3 class="text-lg font-bold text-white">Alberto Morote</h3>
                         <p class="text-neon-purple text-xs uppercase">Especialista Técnico</p>
@@ -539,31 +643,39 @@
                 </div>
                 <!-- Member 3 -->
                 <div class="glass p-6 rounded-xl flex items-center space-x-4 card-hover">
-                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-pink-500 to-pink-900 flex items-center justify-center text-white text-xl font-bold">NM</div>
+                    <div
+                        class="w-16 h-16 rounded-full bg-gradient-to-br from-pink-500 to-pink-900 flex items-center justify-center text-white text-xl font-bold">
+                        NM</div>
                     <div>
                         <h3 class="text-lg font-bold text-white">Nataly Moreno</h3>
                         <p class="text-pink-500 text-xs uppercase">Investigación</p>
                     </div>
                 </div>
-                 <!-- Member 4 -->
-                 <div class="glass p-6 rounded-xl flex items-center space-x-4 card-hover">
-                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-green-900 flex items-center justify-center text-white text-xl font-bold">HR</div>
+                <!-- Member 4 -->
+                <div class="glass p-6 rounded-xl flex items-center space-x-4 card-hover">
+                    <div
+                        class="w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-green-900 flex items-center justify-center text-white text-xl font-bold">
+                        HR</div>
                     <div>
                         <h3 class="text-lg font-bold text-white">Hernan Rojas</h3>
                         <p class="text-neon-green text-xs uppercase">Matemático</p>
                     </div>
                 </div>
-                 <!-- Member 5 -->
-                 <div class="glass p-6 rounded-xl flex items-center space-x-4 card-hover">
-                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-500 to-orange-900 flex items-center justify-center text-white text-xl font-bold">PF</div>
+                <!-- Member 5 -->
+                <div class="glass p-6 rounded-xl flex items-center space-x-4 card-hover">
+                    <div
+                        class="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-500 to-orange-900 flex items-center justify-center text-white text-xl font-bold">
+                        PF</div>
                     <div>
                         <h3 class="text-lg font-bold text-white">Peter Flores</h3>
                         <p class="text-yellow-500 text-xs uppercase">Matemático</p>
                     </div>
                 </div>
-                 <!-- Member 6 -->
-                 <div class="glass p-6 rounded-xl flex items-center space-x-4 card-hover">
-                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-cyan-900 flex items-center justify-center text-white text-xl font-bold">KC</div>
+                <!-- Member 6 -->
+                <div class="glass p-6 rounded-xl flex items-center space-x-4 card-hover">
+                    <div
+                        class="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-cyan-900 flex items-center justify-center text-white text-xl font-bold">
+                        KC</div>
                     <div>
                         <h3 class="text-lg font-bold text-white">Kenlyr Cardenas</h3>
                         <p class="text-cyan-500 text-xs uppercase">Físico</p>
@@ -579,7 +691,8 @@
             <i class="ph ph-quotes text-6xl text-gray-700 mb-8 block"></i>
             <div class="glass p-10 rounded-3xl relative">
                 <p class="text-2xl text-white font-light italic mb-6">
-                    "La física es como el sexo: seguro, que puede tener resultados prácticos, pero no es por eso que lo hacemos."
+                    "La física es como el sexo: seguro, que puede tener resultados prácticos, pero no es por eso que lo
+                    hacemos."
                 </p>
                 <h4 class="text-neon-blue font-bold uppercase tracking-wider">— Richard Feynman</h4>
             </div>
@@ -596,15 +709,19 @@
             <p class="text-gray-400 mb-10">
                 "Atrévete a descubrir un mundo de posibilidades en ciencia y educación."
             </p>
-            
+
             <div class="glass p-8 md:p-12 rounded-3xl shadow-2xl border border-white/5">
                 <form class="space-y-6" onsubmit="event.preventDefault(); alert('Mensaje enviado al equipo Moebius.');">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <input type="text" placeholder="Nombre" class="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-blue transition-colors placeholder-gray-500">
-                        <input type="email" placeholder="Email" class="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-blue transition-colors placeholder-gray-500">
+                        <input type="text" placeholder="Nombre"
+                            class="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-blue transition-colors placeholder-gray-500">
+                        <input type="email" placeholder="Email"
+                            class="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-blue transition-colors placeholder-gray-500">
                     </div>
-                    <textarea rows="4" placeholder="Mensaje..." class="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-blue transition-colors placeholder-gray-500"></textarea>
-                    <button type="submit" class="w-full btn-neon py-4 font-bold tracking-wider uppercase rounded-lg hover:scale-[1.02] active:scale-[0.98] transition-transform">
+                    <textarea rows="4" placeholder="Mensaje..."
+                        class="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-blue transition-colors placeholder-gray-500"></textarea>
+                    <button type="submit"
+                        class="w-full btn-neon py-4 font-bold tracking-wider uppercase rounded-lg hover:scale-[1.02] active:scale-[0.98] transition-transform">
                         Enviar Mensaje
                     </button>
                 </form>
@@ -620,9 +737,12 @@
                 <p class="text-gray-600 text-sm mt-1">Startup para la ciencia</p>
             </div>
             <div class="flex space-x-8 mt-4 md:mt-0">
-                <a href="#" class="text-gray-500 hover:text-blue-500 transition-colors text-xl"><i class="ph ph-facebook-logo"></i></a>
-                <a href="#" class="text-gray-500 hover:text-sky-500 transition-colors text-xl"><i class="ph ph-twitter-logo"></i></a>
-                <a href="#" class="text-gray-500 hover:text-red-500 transition-colors text-xl"><i class="ph ph-google-logo"></i></a>
+                <a href="#" class="text-gray-500 hover:text-blue-500 transition-colors text-xl"><i
+                        class="ph ph-facebook-logo"></i></a>
+                <a href="#" class="text-gray-500 hover:text-sky-500 transition-colors text-xl"><i
+                        class="ph ph-twitter-logo"></i></a>
+                <a href="#" class="text-gray-500 hover:text-red-500 transition-colors text-xl"><i
+                        class="ph ph-google-logo"></i></a>
             </div>
         </div>
     </footer>
@@ -650,7 +770,7 @@
 
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-        
+
         const container = document.getElementById('canvas-container');
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setPixelRatio(window.devicePixelRatio);
@@ -658,11 +778,11 @@
 
         // Geometría TorusKnot
         const geometry = new THREE.TorusKnotGeometry(12, 3, 100, 16);
-        const material = new THREE.MeshBasicMaterial({ 
-            color: 0x00f3ff, 
-            wireframe: true, 
-            transparent: true, 
-            opacity: 0.15 
+        const material = new THREE.MeshBasicMaterial({
+            color: 0x00f3ff,
+            wireframe: true,
+            transparent: true,
+            opacity: 0.15
         });
         const torusKnot = new THREE.Mesh(geometry, material);
         scene.add(torusKnot);
@@ -671,8 +791,8 @@
         const particlesGeometry = new THREE.BufferGeometry();
         const particlesCount = 800;
         const posArray = new Float32Array(particlesCount * 3);
-        for(let i = 0; i < particlesCount * 3; i++) {
-            posArray[i] = (Math.random() - 0.5) * 80; 
+        for (let i = 0; i < particlesCount * 3; i++) {
+            posArray[i] = (Math.random() - 0.5) * 80;
         }
         particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
         const particlesMaterial = new THREE.PointsMaterial({
@@ -723,7 +843,7 @@
 
             particlesMesh.rotation.y = -mouseY * 0.0001;
             particlesMesh.rotation.x = -mouseX * 0.0001;
-            
+
             const scale = 1 + Math.sin(elapsedTime * 0.5) * 0.05;
             torusKnot.scale.set(scale, scale, scale);
 
@@ -738,4 +858,5 @@
         });
     </script>
 </body>
+
 </html>
